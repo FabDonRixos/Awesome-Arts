@@ -14,6 +14,9 @@ on:
     branches:
       - "master"
 
+permissions:
+  contents: write
+
 jobs:
   createTag:
     runs-on: ubuntu-latest
