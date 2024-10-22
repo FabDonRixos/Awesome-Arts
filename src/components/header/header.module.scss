@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #202020;
+  padding: 1rem 2rem;
+
+  & .left {
+    .logo {
+
+    }
+  }
+
+  & .right {
+    .filters {
+
+    }
+
+    .search {
+
+    }
+
+    .links {
+
+    }
+  }
+}

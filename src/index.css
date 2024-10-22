@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100vh;
+  scrollbar-width: thin;
+  background-color: #151515;
+}
