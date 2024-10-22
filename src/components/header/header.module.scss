@@ -1,17 +1,36 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #202020;
+  background-color: #121212;
+  border-bottom: 1px solid #444444;
   padding: 1rem 2rem;
 
-  & .left {
-    .logo {
+  svg {
+    width: inherit;
+    height: inherit;
+  }
 
+  & .left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .logo {
+      width: 5rem;
+      height: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+      & h1 {
+        display: none;
+      }
     }
   }
 
   & .right {
+    margin-left: 1rem;
+
     .filters {
 
     }
@@ -21,7 +40,24 @@
     }
 
     .links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
+      & a {
+        width: 2rem;
+        height: 2rem;
+        color: #ffffff7f;
+
+        &:is(:hover, :active, :focus) {
+          color: white;
+          outline: none;
+        }
+
+        &:last-child {
+          height: 2.5rem;
+        }
+      }
     }
   }
 }
