@@ -7,7 +7,7 @@
     "name": "Fabian Mathys",
     "email": "fabian@mathysli.ch"
   },
-  "homepage": "https://fabdonrixos.github.io/awesome-arts/",
+  "homepage": "https://awesome-arts.fabian.li/",
   "type": "module",
   "scripts": {
     "dev": "vite",
