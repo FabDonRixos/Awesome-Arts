@@ -16,6 +16,76 @@ on:
 
 jobs:
   createTag:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: master
+
+      - name: Set up Node.js v18.20.4
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.20.4
+
+      - name: Check Node Dependencies
+        run: npm install
+
+      - name: Set up Git
+        run: |
+          git config user.name "Github Action"
+          git config user.email "action@fabian.li"
+
+      - name: Determine Version Bump based on Inputs
+        id: determine_version
+        run: |
+          VERSION_TYPE="${{ github.event.inputs.version || 'patch' }}"
+          echo "Version bump type: $VERSION_TYPE"
+          echo "bump_type=$VERSION_TYPE" >> $GITHUB_ENV
+
+      - name: Update the version
+        id: update_version
+        run: |
+          VERSION_TYPE="${{ env.bump_type }}"
+          echo "Bumping version as $VERSION_TYPE"
+          echo "version=$(npm version $VERSION_TYPE --no-git-tag-version)" >> $GITHUB_OUTPUT
+
+      - name: Commit all changes
+        run: |
+          git add -A  # Add all changes, including unmodified files from development
+          git commit -m "Bump version to ${{ steps.update_version.outputs.version }}"
+
+      - name: Push the version bump
+        run: |
+          git push
+
+      - name: Create and push git tag
+        run: |
+          next_version=${{ steps.update_version.outputs.version }}
+          git tag -a "$next_version" -m "Version $next_version"
+          git push --follow-tags
 
   deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js v18.20.4
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.20.4
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages

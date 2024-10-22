@@ -1,7 +1,13 @@
 {
   "name": "awesome-arts",
-  "private": true,
+  "description": "CSS only Art Collection",
   "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "Fabian Mathys",
+    "email": "fabian@mathysli.ch"
+  },
+  "homepage": "https://awesome-arts.fabian.li",
   "type": "module",
   "scripts": {
     "dev": "vite",
