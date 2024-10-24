@@ -1,0 +1,91 @@
+name: Component in Progress
+description: Component you are/will be working on.
+title: "[CW]: "
+labels: ["Component"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to tell us what you are currently working on for the project, for others not wo work for nothing.
+        Please fill out the form below inorder to understand the Component your working on.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: In what category would the component fit best.
+      options:
+        - Shapes
+        - Logos
+        - Icons
+        - Animations
+        - Illustrations
+        - 3D
+        - Text Art
+        - Scenes
+        - Nature
+        - Underwater
+        - Space
+        - Planets
+        - Elements
+        - Holidays
+        - Seasonal
+        - Graphics
+        - IDEs
+        - Games
+        - Film / Series / Videos
+        - Pixel Art
+        - Inputs (text, button, etc.)
+        - DEV
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: inspiration
+    attributes:
+      label: Inspiration
+      description: What inspired this idea?
+      placeholder: Describe what led you to this component idea
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Give a description of the Component
+      placeholder: Describe
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: todos
+    attributes:
+      label: TODO's
+      description: Make sure you went through all the todo's before submitting the issue.
+      options:
+        - label: The component hasn't been suggested / isn't already implemented yet.
+          required: true
+        - label: The title is clear and descriptive.
+          required: true
+        - label: The component is properly described.
+          required: true
+        - label: Your name is under Assignees
+          required: true
+        - label: The Component has good tags.
+          required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/FabDonRixos/awesome-arts/blob/master/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow the Code of Conduct
+          required: true
+
+  - type: input
+    id: feedback
+    attributes:
+      label: Feedback on Process
+      description: Any suggestions for improving this request process?
+      placeholder: Your feedback

@@ -1,0 +1,96 @@
+name: Component Request
+description: Suggest a new Component to inspire others.
+title: "[CR]: "
+labels: ["Component"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to requesting a new Component to give other people some ideas what they could create.
+        Please fill out the form below inorder to understand the Component your requesting.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: In what category would the component fit best.
+      options:
+        - Shapes
+        - Logos
+        - Icons
+        - Animations
+        - Illustrations
+        - 3D
+        - Text Art
+        - Scenes
+        - Nature
+        - Underwater
+        - Space
+        - Planets
+        - Elements
+        - Holidays
+        - Seasonal
+        - Graphics
+        - IDEs
+        - Games
+        - Film / Series / Videos
+        - Pixel Art
+        - Inputs (text, button, etc.)
+        - DEV
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: inspiration
+    attributes:
+      label: Inspiration
+      description: What inspired this idea?
+      placeholder: Describe what led you to this component idea
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Give a description of the desired Component
+      placeholder: Describe
+    validations:
+      required: true
+
+  - type: textarea
+    id: issues
+    attributes:
+      label: Are there any possible issues with the idea
+      description: If so please describe.
+      placeholder: Issues
+
+  - type: checkboxes
+    id: todos
+    attributes:
+      label: TODO's
+      description: Make sure you went through all the todo's before submitting the issue.
+      options:
+        - label: The component hasn't been suggested / isn't already implemented yet.
+          required: true
+        - label: The title is clear and descriptive.
+          required: true
+        - label: The component is properly described.
+          required: true
+        - label: The Component has good tags.
+          required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/FabDonRixos/awesome-arts/blob/master/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow the Code of Conduct
+          required: true
+
+  - type: input
+    id: feedback
+    attributes:
+      label: Feedback on Process
+      description: Any suggestions for improving this request process?
+      placeholder: Your feedback
