@@ -1,0 +1,62 @@
+name: "Feature Request"
+description: "Create a bug report, to help us improve the project."
+title: "[RFF]: "
+labels: ["Feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to requesting a new Feature to improve the overall Project.
+        Please fill out the form below inorder to understand what new feature you desire.
+
+  - type: textarea
+    id: related
+    attributes:
+      label: "Is your feature request related to a problem?"
+      description: "If so please describe."
+      placeholder: "description"
+
+  - type: textarea
+    id: what
+    attributes:
+      label: "Describe the solution you'd like."
+      description: "please provide a description of what you would like to have."
+      placeholder: "description"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional information's"
+      placeholder: "more context"
+
+  - type: checkboxes
+    id: todos
+    attributes:
+      label: "TODO's"
+      description: "Make sure you went through all the todo's before submitting the issue."
+      options:
+        - label: The feature hasn't been requested yet.
+          required: true
+        - label: The title is clear and descriptive.
+          required: true
+        - label: The feature is properly described.
+          required: true
+        - label: The Feature has good tags.
+          required: true
+        - label: The issue is assigned to the correct person (if necessary)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Code of Conduct"
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/FabDonRixos/awesome-arts/blob/master/CODE_OF_CONDUCT.md)
+      options:
+        - label: "I agree to follow the Code of Conduct"
+          required: true
+
+  - type: input
+    id: feedback
+    attributes:
+      label: "Feedback on Process"
+      description: "Any suggestions for improving this request process?"
+      placeholder: Your feedback

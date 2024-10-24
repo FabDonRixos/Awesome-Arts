@@ -1,0 +1,94 @@
+name: "Bug report"
+description: "Create a bug report, to help us improve the project."
+title: "[BUG]: "
+labels: ["Bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to reporting a bug you have found inside the project.
+        Please fill out the form below inorder to fully understand the bug you approached.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: "Also tell us, what did you expect to happen?"
+      placeholder: "Tell us what you see!"
+      value: "A bug happened!"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Also tell us, what did you expect to happen?"
+      placeholder: "- Step 1"
+      value: |
+        - 
+        - 
+        -
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "What browsers are you seeing the problem on?"
+      multiple: true
+      options:
+        - "Firefox"
+        - "Chrome"
+        - "Safari"
+        - "Microsoft Edge"
+        - "Other (please specify in Additional information's)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Relevant log output"
+      description: "Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks."
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional information's"
+      placeholder: "system requirements, version, component, etc."
+
+  - type: checkboxes
+    id: todos
+    attributes:
+      label: "TODO's"
+      description: "Make sure you went through all the todo's before submitting the issue."
+      options:
+        - label: "The bug hasn't been reported yet."
+          required: true
+        - label: "The title is clear and descriptive."
+          required: true
+        - label: "The bug has been properly described."
+          required: true
+        - label: "The Feature has good tags."
+          required: true
+        - label: "The issue is assigned to the correct person (if necessary)"
+        - label: "If it's a vulnerability, the label is set."
+          required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Code of Conduct"
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/FabDonRixos/awesome-arts/blob/master/CODE_OF_CONDUCT.md)
+      options:
+        - label: "I agree to follow the Code of Conduct"
+          required: true
+
+  - type: input
+    id: feedback
+    attributes:
+      label: "Feedback on Process"
+      description: "Any suggestions for improving this report process?"
+      placeholder: "Your feedback"
