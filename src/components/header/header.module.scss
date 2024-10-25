@@ -88,15 +88,4 @@
 
 .search, .filters {
   width: 10rem;
-  padding: 1rem;
-  border-radius: .5rem;
-  background-color: #0b0b0b;
-  color: white;
-  border: #444444 1px solid;
-
-  &:is(:hover, :active, :focus) {
-    outline: none;
-    border-color: #121212;
-    box-shadow: 0 0 10px #03dc00;
-  }
 }

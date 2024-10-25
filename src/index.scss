@@ -14,7 +14,45 @@ html, body, #root {
   color: white;
 }
 
+button, input, select {
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: #0b0b0b;
+  color: white;
+  border: #444444 1px solid;
+
+  &:is(:hover, :active, :focus) {
+    outline: none;
+    border-color: #121212;
+    box-shadow: 0 0 10px #03dc00;
+  }
+}
+
 .container {
   padding: 2rem 1rem;
+  max-width: min(80rem, 100%);
   margin: 0 auto;
+
+  & .component-list {
+    &:not(:has(.no-components-found)) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    & .component {
+      display: grid;
+      place-items: center;
+      width: 20rem;
+      height: 20rem;
+      background-color: var(--background-color);
+    }
+
+    & .no-components-found {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 }
