@@ -2,6 +2,11 @@ import {ReactNode} from "react";
 import Template from "../1_Template/Template.tsx"
 import {EArtworkTags} from "./artworkTags.ts";
 
+export interface ILink {
+    name: string;
+    href: string;
+}
+
 export interface IArtworkItem {
     component: ReactNode;
     titel: string;
@@ -10,7 +15,7 @@ export interface IArtworkItem {
     tags?: EArtworkTags[] | string[]
     backgroundColor?: `#${string}`;     // No transparent backgrounds
     full?: boolean;                     // Only use this if you really have no other but to claim more space.
-    oneLink?: string;
+    oneLink?: ILink;
     editedAt?: Date;
 }
 
@@ -21,8 +26,11 @@ const artworksList: IArtworkItem[] = [
         description: "round circle",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE],
-        backgroundColor: "#000",
-        oneLink: "https://fabian.li",
+        backgroundColor: "#f00",
+        oneLink: {
+            name: "fabian.li",
+            href: "https://fabian.li"
+        },
         editedAt: new Date("2024-10-26")
     },
     {
@@ -33,7 +41,10 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.SIMPLE],
         backgroundColor: "#000",
         full: true,
-        oneLink: "https://fabian.li",
+        oneLink: {
+            name: "fabian.li",
+            href: "https://fabian.li"
+        },
         editedAt: new Date("2024-10-26")
     },
     {
@@ -43,7 +54,10 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE],
         backgroundColor: "#000",
-        oneLink: "https://fabian.li",
+        oneLink: {
+            name: "fabian.li",
+            href: "https://fabian.li"
+        },
         editedAt: new Date("2024-10-26")
     },
     {
@@ -53,7 +67,10 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE],
         backgroundColor: "#000",
-        oneLink: "https://fabian.li",
+        oneLink: {
+            name: "fabian.li",
+            href: "https://fabian.li"
+        },
         editedAt: new Date("2024-10-26")
     }
 ]

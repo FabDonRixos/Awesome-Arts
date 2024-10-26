@@ -41,7 +41,24 @@ function App() {
                                         : {"--background-color": "#000000"} as CSSProperties
                                 }
                             >
-                                {artwork.component}
+                                <div className={"content"}>
+                                    {artwork.component}
+                                </div>
+                                <div className={"contribution"}>
+                                    <div className={"component-creator"}>
+                                        <a href={`https://github.com/${artwork.gitHubName}/`} target={"_blank"}>
+                                            <span>© {artwork.gitHubName}</span>
+                                        </a>
+
+                                        {artwork.oneLink &&
+                                            <a href={artwork.oneLink.href} target={"_blank"}>
+                                                {artwork.oneLink.name}
+                                            </a>
+                                        }
+                                    </div>
+                                    <h1>{artwork.titel}</h1>
+                                    {artwork.editedAt && <span>{artwork.editedAt.toLocaleDateString()}</span>}
+                                </div>
                             </div>
                         ) : (
                             <div className={"no-components-found"}>
