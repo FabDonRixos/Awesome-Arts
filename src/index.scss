@@ -42,34 +42,52 @@ button, input, select {
 
       grid-template-columns: 1fr 1fr 1fr;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1000px) {
         grid-template-columns: 1fr 1fr;
       }
 
-      @media (max-width: 575px) {
+      @media (max-width: 670px) {
         grid-template-columns: 1fr;
       }
     }
 
     .component {
+      transition: box-shadow .25s ease-in;
       display: grid;
       place-items: center;
-      background-color: var(--background-color);
       padding: 1rem;
       aspect-ratio: 1;
+      overflow: hidden;
+      background-color: var(--background-color);
+      box-shadow: 0 0 0 #ffffff80;
+      border: #737373 1px solid;
+      border-radius: 1rem;
 
       &.full {
         grid-column: span 3;
         aspect-ratio: 3 / 1.5;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1000px) {
           grid-column: span 2;
           aspect-ratio: 2 / 1.25;
         }
 
-        @media (max-width: 575px) {
+        @media (max-width: 670px) {
           grid-column: span 1;
           aspect-ratio: 1;
+        }
+      }
+
+      & > * {
+        transition: scale .25s ease-in;
+        scale: 1;
+      }
+
+      &:is(:hover, :active, :focus, :focus-within) {
+        box-shadow: 1px 1px 10px #ffffff80;
+
+        & > * {
+          scale: 1.05;
         }
       }
     }
