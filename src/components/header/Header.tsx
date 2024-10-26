@@ -58,8 +58,8 @@ function Inputs({setCurrentTag, setSearch, currentTag, search}: InputsProps) {
                 onChange={e => setCurrentTag(e.target.value as EArtworkTags)}
             >
                 <option value={""}>Select a Tag</option>
-                {Object.entries(EArtworkTags).map(([key, label]) =>
-                    <option key={key} label={label} value={key}/>
+                {Object.entries(EArtworkTags).map(([key, value]) =>
+                    <option key={key} label={key} value={value}/>
                 )}
             </select>
         </>
