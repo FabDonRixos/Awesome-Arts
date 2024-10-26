@@ -33,25 +33,53 @@ button, input, select {
   max-width: min(80rem, 100%);
   margin: 0 auto;
 
-  & .component-list {
+  .component-list {
     &:not(:has(.no-components-found)) {
       display: grid;
-      grid-template-columns: auto auto auto;
       gap: 1rem;
-      justify-content: center;
+
+      grid-auto-flow: dense;
+
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @media (max-width: 991px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 575px) {
+        grid-template-columns: 1fr;
+      }
     }
 
-    & .component {
+    .component {
       display: grid;
       place-items: center;
-      width: 20rem;
-      height: 20rem;
       background-color: var(--background-color);
+      padding: 1rem;
+      aspect-ratio: 1;
+
+      &.full {
+        grid-column: span 3;
+        aspect-ratio: 3 / 1.5;
+
+        @media (max-width: 991px) {
+          grid-column: span 2;
+          aspect-ratio: 2 / 1.25;
+        }
+
+        @media (max-width: 575px) {
+          grid-column: span 1;
+          aspect-ratio: 1;
+        }
+      }
     }
 
-    & .no-components-found {
+    .no-components-found {
       display: flex;
+      justify-content: center;
       align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
       gap: 1rem;
     }
   }

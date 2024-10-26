@@ -31,23 +31,19 @@ function App() {
             <div className={"container"}>
                 <div className={"component-list"}>
                     {filteredArtworks.length > 0 ?
-                        filteredArtworks.map(artwork => {
-                            artwork.backgroundColor = artwork.backgroundColor ?? "#000"
-
-                            return (
-                                <div
-                                    key={artworksList.indexOf(artwork)}
-                                    className={"component"}
-                                    style={
-                                        artwork.backgroundColor.length <= 7
-                                            ? {"--background-color": artwork.backgroundColor} as CSSProperties
-                                            : {}
-                                    }
-                                >
-                                    {artwork.component}
-                                </div>
-                            )
-                        }) : (
+                        filteredArtworks.map(artwork =>
+                            <div
+                                key={artworksList.indexOf(artwork)}
+                                className={`component${artwork.full ? " full" : ""}`}
+                                style={
+                                    artwork.backgroundColor && artwork.backgroundColor.length <= 7
+                                        ? {"--background-color": artwork.backgroundColor} as CSSProperties
+                                        : {"--background-color": "#000000"} as CSSProperties
+                                }
+                            >
+                                {artwork.component}
+                            </div>
+                        ) : (
                             <div className={"no-components-found"}>
                                 <span>No Components where found corresponding to the current filter settings.</span>
                                 <button onClick={() => {
