@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://awesome-arts.fabian.li/" target="_blank">
-    <img src="https://github.com/FabDonRixos/awesome-arts/blob/master/logo_with_text.svg" alt="logo" />
+    <img src="https://github.com/FabDonRixos/awesome-arts/blob/master/logo/logo_with_text.svg" alt="logo" />
   </a>
 </p>
 
