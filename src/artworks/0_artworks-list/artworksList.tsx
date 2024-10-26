@@ -26,19 +26,6 @@ const artworksList: IArtworkItem[] = [
         description: "round circle",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE],
-        backgroundColor: "#f00",
-        oneLink: {
-            name: "fabian.li",
-            href: "https://fabian.li"
-        },
-        editedAt: new Date("2024-10-26")
-    },
-    {
-        component: <Template />,
-        titel: "circle",
-        description: "round circle",
-        gitHubName: "FabDonRixos",
-        tags: [EArtworkTags.SIMPLE],
         backgroundColor: "#000",
         full: true,
         oneLink: {
@@ -47,32 +34,6 @@ const artworksList: IArtworkItem[] = [
         },
         editedAt: new Date("2024-10-26")
     },
-    {
-        component: <Template />,
-        titel: "circle",
-        description: "round circle",
-        gitHubName: "FabDonRixos",
-        tags: [EArtworkTags.SIMPLE],
-        backgroundColor: "#000",
-        oneLink: {
-            name: "fabian.li",
-            href: "https://fabian.li"
-        },
-        editedAt: new Date("2024-10-26")
-    },
-    {
-        component: <Template />,
-        titel: "circle",
-        description: "round circle",
-        gitHubName: "FabDonRixos",
-        tags: [EArtworkTags.SIMPLE],
-        backgroundColor: "#000",
-        oneLink: {
-            name: "fabian.li",
-            href: "https://fabian.li"
-        },
-        editedAt: new Date("2024-10-26")
-    }
 ]
 
 export default artworksList;
