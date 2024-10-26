@@ -1,17 +1,22 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   background-color: #121212;
   border-bottom: 1px solid #444444;
   padding: 1rem 2rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   svg {
     width: inherit;
     height: inherit;
   }
 
-  & .left{
+  & .left {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -20,8 +25,8 @@
       width: 5rem;
       height: 5rem;
     }
-    
-    @media (max-width: 768px) {
+
+    @media (max-width: 403px) {
       & h1 {
         display: none;
       }
@@ -29,14 +34,14 @@
   }
 
   & .right {
+    display: flex;
+    gap: 2rem;
     margin-left: 1rem;
 
-    .filters {
-
-    }
-
-    .search {
-
+    @media (max-width: 991px) {
+      & .search, & .filters {
+        display: none;
+      }
     }
 
     .links {
@@ -52,12 +57,35 @@
         &:is(:hover, :active, :focus) {
           color: white;
           outline: none;
+          filter: drop-shadow(3px 5px 5px #03dc00);
         }
 
         &:last-child {
           height: 2.5rem;
         }
+
+        @media (max-width: 767px) {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
       }
     }
   }
+}
+
+.bottom {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.search, .filters {
+  width: 10rem;
 }
