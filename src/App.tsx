@@ -1,7 +1,8 @@
 import Header from "./components/header/Header.tsx";
-import {CSSProperties, useState} from "react";
+import {useState} from "react";
 import {EArtworkTags} from "./artworks/0_artworks-list/artworkTags.ts";
 import artworksList from "./artworks/0_artworks-list/artworksList.tsx";
+import Component from "./components/component/Component.tsx";
 
 function App() {
     const [currentTag, setCurrentTag] = useState<EArtworkTags>();
@@ -32,34 +33,7 @@ function App() {
                 <div className={"component-list"}>
                     {filteredArtworks.length > 0 ?
                         filteredArtworks.map(artwork =>
-                            <div
-                                key={artworksList.indexOf(artwork)}
-                                className={`component${artwork.full ? " full" : ""}`}
-                                style={
-                                    artwork.backgroundColor && artwork.backgroundColor.length <= 7
-                                        ? {"--background-color": artwork.backgroundColor} as CSSProperties
-                                        : {"--background-color": "#000000"} as CSSProperties
-                                }
-                            >
-                                <div className={"content"}>
-                                    {artwork.component}
-                                </div>
-                                <div className={"contribution"}>
-                                    <div className={"component-creator"}>
-                                        <a href={`https://github.com/${artwork.gitHubName}/`} target={"_blank"}>
-                                            <span>© {artwork.gitHubName}</span>
-                                        </a>
-
-                                        {artwork.oneLink &&
-                                            <a href={artwork.oneLink.href} target={"_blank"}>
-                                                {artwork.oneLink.name}
-                                            </a>
-                                        }
-                                    </div>
-                                    <h1>{artwork.titel}</h1>
-                                    {artwork.editedAt && <span>{artwork.editedAt.toLocaleDateString()}</span>}
-                                </div>
-                            </div>
+                            <Component key={artworksList.indexOf(artwork)} artwork={artwork}/>
                         ) : (
                             <div className={"no-components-found"}>
                                 <span>No Components where found corresponding to the current filter settings.</span>
