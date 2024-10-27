@@ -2,7 +2,7 @@
 PLease note by participating in this project you agree on our term documented in [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md).
 
 - [Contribution](#contribution)
-- [Pull Request](#pull_request)
+- [Pull Request](#pull-request)
 
 ## Contribution
 If you are willing to contribute to this project here is a step by step introduction on how you can create a new Component.
