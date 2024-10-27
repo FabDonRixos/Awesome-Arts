@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import Template from "../1_Template/Template.tsx"
+import Template from "../0_template/Template.tsx"
 import {EArtworkTags} from "./artworkTags.ts";
 
 export interface ILink {
