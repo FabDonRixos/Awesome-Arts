@@ -66,6 +66,7 @@
 .clock:hover .second {
   background-color: #d08018;
 }
+/*Rotation for clock*/
 @keyframes rotateHour {
   from {
     transform: translate(-50%, -100%) rotate(0deg);
@@ -90,6 +91,7 @@
     transform: translate(-50%, -100%) rotate(360deg);
   }
 }
+/*Adding number*/
 .clock::before {
   content: "XII";
   position: absolute;
