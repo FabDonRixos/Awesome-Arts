@@ -1,0 +1,134 @@
+.clock {
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 8px solid #2c3e50;
+  background-color: #ecf0f1;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.clock:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.center {
+  width: 10px;
+  height: 10px;
+  background-color: #2980b9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.clock:hover .center {
+  background-color: #c0392b;
+}
+.hour,
+.minute,
+.second {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transition: background-color 0.3s ease;
+}
+.hour {
+  width: 6px;
+  height: 30px;
+  background-color: #2980b9;
+  animation: rotateHour 43200s infinite linear;
+}
+.minute {
+  width: 4px;
+  height: 45px;
+  background-color: #3498db;
+  animation: rotateMinute 3600s infinite linear;
+}
+.second {
+  width: 2px;
+  height: 55px;
+  background-color: #e74c3c;
+  animation: rotateSecond 60s infinite linear;
+}
+.clock:hover .hour {
+  background-color: #1abc9c;
+}
+.clock:hover .minute {
+  background-color: #0ea3b7;
+}
+.clock:hover .second {
+  background-color: #d08018;
+}
+@keyframes rotateHour {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+@keyframes rotateMinute {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+@keyframes rotateSecond {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+.clock::before {
+  content: "XII";
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #2c3e50;
+}
+.clock::after {
+  content: "VI";
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #2c3e50;
+}
+.three::before {
+  content: "III";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: #2c3e50;
+}
+.nine::before {
+  content: "IX";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: #2c3e50;
+}
+.clock:hover::before,
+.clock:hover::after,
+.clock:hover .three::before,
+.clock:hover .nine::before {
+  color: #c0392b;
+}
