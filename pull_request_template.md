@@ -23,14 +23,14 @@ Used issue # (fill in your issue)
 - [ ] I have only used module css classes, with exeption for some part where you can use the index.scss.
 - [ ] I have read the [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md) & the [`CONTRIBUTING`](CONTRIBUTING.md).
 
-## Components spesific
+## Components specific
 
 - [ ] The Component is somewhere unique to already other created components.
 - [ ] I have only used html and css to create my component, apart from the react component.
 - [ ] I have made the whole component myself and didn't stole it from someone other.
 - [ ] I have documented my own copyright statments inside the artworklist.
 
-## Feature spesific
+## Feature specific
 
 - [ ] My new Feature does not effect the styling and the functioning of other thing, in a way so they don't work anymore.
 - [ ] If I edited some core files of the project I have checked the code extra carfully.
