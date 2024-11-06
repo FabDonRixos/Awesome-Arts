@@ -34,6 +34,6 @@ Used issue # (fill in your issue)
 ## Feature specific
 
 - [ ] My new Feature does not affect the styling and the functioning of other thing, in a way, so they don't work
-  anymore.
+      anymore.
 - [ ] If I edited some core files of the project I have checked the code extra carefully.
 - [ ] If the new feature have UI changes, I have made them responsive as good as possible.

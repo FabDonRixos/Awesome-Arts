@@ -29,7 +29,7 @@ Component.
   │
   └── App.tsx
   ```
-    - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
+  - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
 - Use the template
 - Go to the artworkList and create a new entry look at the IArtworkItem to know what the props are
 - Now you have set up everything and your Component should render inside the application, you're ready to get creative.

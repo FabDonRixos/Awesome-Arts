@@ -7,12 +7,7 @@
   "tabWidth": 2,
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx",
-        "*.js",
-        "*.jsx"
-      ],
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "options": {
         "tabWidth": 4
       }

@@ -1,7 +1,7 @@
 name: "Component Request"
 description: "Suggest a new Component to inspire others."
 title: "[CR]: "
-labels: [ "Component" ]
+labels: ["Component"]
 body:
   - type: markdown
     attributes:

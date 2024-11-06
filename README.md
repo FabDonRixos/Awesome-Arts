@@ -71,7 +71,7 @@ npm install
 
 - Install the Eslint & the Prettier Plugin
 - Go to settings and enable reformat code on Save
-- Configure Prettier to run for Files `**/*.{html,css,scss,ts,tsx,js,jsx}`
+- Configure Prettier to run for Files `**/*`
 
 4. Start the application
 

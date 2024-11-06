@@ -1,7 +1,7 @@
 name: "Component in Progress"
 description: "Component you are/will be working on."
 title: "[CW]: "
-labels: [ "Component" ]
+labels: ["Component"]
 body:
   - type: markdown
     attributes:
