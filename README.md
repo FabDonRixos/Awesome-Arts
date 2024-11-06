@@ -92,9 +92,9 @@ Contributions are very welcomed, and you can contribute in many different ways:
 - Contribute to the Project by giving us feedback, so we can improve.
 - **But most importantly, your presence and support are valuable contributions to the project.**
 
-> Please read [`CONTRIBUTING`](CONTRIBUTING.md) for the process to submitting pull requests.
+> Please read [`CONTRIBUTING`](.github/CONTRIBUTING.md) for the process to submitting pull requests.
 > 
-> Please read [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md) to lern about our standards.
+> Please read [`CODE OF CONDUCT`](.github/CODE_OF_CONDUCT.md) to lern about our standards.
 
 # `💕` Support
 💚 Thanks for your support to the Project. We are very pleased to have you here.

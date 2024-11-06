@@ -1,17 +1,15 @@
-import style from "./component.module.scss";
 import {IArtworkItem} from "../../artworks/0_artworks-list/artworksList.tsx";
 import {CSSProperties} from "react";
+import style from "./artwork.module.scss";
 
 interface ArtWrapperProps {
-    key: number;
     artwork: IArtworkItem;
 }
 
-export default function Component({key, artwork}: ArtWrapperProps) {
+export default function Artwork({artwork}: ArtWrapperProps) {
 
     return (
         <div
-            key={key}
             className={`${style.component} ${artwork.full ? `${style.full}` : undefined}`}
             style={
                 artwork.backgroundColor && artwork.backgroundColor.length <= 7

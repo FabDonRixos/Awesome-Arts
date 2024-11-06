@@ -35,7 +35,7 @@ If you are willing to contribute to this project here is a step by step introduc
 - [Feature](#feature)
 
 ### Component
-If you have created a new component you'll have to tick off the folowing TODOs in order for you Pull requst to be aproved.
+If you have created a new component you'll have to tick off the following TODOs in order for you Pull request to be approved.
 
 - The Component is somewhere unique to already other crated components.
 - Everything I created is my own and I haven't stolen it from somebody else.
@@ -43,7 +43,7 @@ If you have created a new component you'll have to tick off the folowing TODOs i
 - I have followed the Project structure for components, read [Contribution](#contribution) for more details.
 - My Component looks good on most device including (phones, tablets, laptops, screens), if not don't worry, but write a comment inside you main component tsx file.
 - My Code is well-structured and easy to read for someone other to understand it properly.
-- If something could be unclear/complex for others to understand i have made a comment for this part.
+- If something could be unclear/complex for others to understand I have made a comment for this part.
 - If I use the full property I have mady my mind up and really need the extra space.
 - I haven't edited a file which is not my component files or the artworksList, else create a new [Feature](#feature).
 - I have only used module css classes.
@@ -59,5 +59,5 @@ New features will be inspected much careful that new Components.
 - The position where I placed the new files inside the project tree make sense, in compartment to the current version of the code.
 - My code is well-structured and easy to read for someone other to understand it properly.
 - If the new feature have UI changes, I have made them responsive as good as possible.
-- If something could be unclear/complex for others to understand i have made a comment for this part.
+- If something could be unclear/complex for others to understand I have made a comment for this part.
 - I have only used module css classes, with exception for some part where you can use the index.scss.
