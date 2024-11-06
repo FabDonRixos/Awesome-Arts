@@ -7,22 +7,22 @@
 <h4 align="center">Create CSS Only components or just get inspired by them</h4>
 
 <p align="center">
-  <a href="http://creativecommons.org/publicdomain/zero/1.0/" >
-    <img src="https://img.shields.io/github/license/FabDonRixos/awesome-arts" />
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" >
+    <img src="https://img.shields.io/github/license/FabDonRixos/awesome-arts" alt="licence" />
   </a>
   
   <a href="https://github.com/FabDonRixos/awesome-arts/tags" >
-    <img src="https://img.shields.io/github/v/tag/FabDonRixos/awesome-arts" />
+    <img src="https://img.shields.io/github/v/tag/FabDonRixos/awesome-arts" alt="tags" />
   </a>
   
-  <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" />
+  <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="open-source" />
   
   <a href="https://github.com/FabDonRixos/awesome-arts.git" >
     <img src="https://img.shields.io/badge/Contributions-are_welcomed-green.svg" alt="Contributions are welcomed" />
   </a>
   
   <a href="https://awesome-arts.fabian.li/" >
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fawesome-arts.fabian.li" />
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fawesome-arts.fabian.li" alt="website" />
   </a>
 </p>
 
@@ -38,7 +38,7 @@
 
 <!-- [![Stargazers over time](https://starchart.cc/FabDonRixos/awesome-arts.svg?variant=adaptive)](https://starchart.cc/FabDonRixos/awesome-arts) -->
 
-# `🖐️` Introducion `Awesome-Arts`
+# `🖐️` Introduction `Awesome-Arts`
 `Awesome-Arts` is an open-source repository designed to showcase your amazing and inspiring CSS-only artworks. Join our community of creative developers and share your unique designs while exploring the endless possibilities of CSS art. Contribute your creations and inspire others!
 
 > \[!IMPORTANT]
@@ -85,7 +85,7 @@ This project was licensed under the CC0-1.0 License.
 See [`License`](LICENSE) for details.
 
 # `🤝` Contributing to `Awesome-Arts`
-Contributions are very welcomed, and you can contribute in many diffrent ways:
+Contributions are very welcomed, and you can contribute in many different ways:
 - Contribute to the Project by creating your own Components.
 - Contribute to the Project by giving others ideas for what to implement next.
 - Contribute to the Project by Reporting Bugs.
