@@ -70,7 +70,7 @@ npm start
 - [React vite](https://vite.dev/guide/): The best React-based framework in the universum.
 - [TypeScript](https://www.typescriptlang.org/): A programming language that adds static typing to JavaScript.
 - [Sass/Scss](https://sass-lang.com/guide/): A preprocessor, that interpreted or compiled into CSS,
-- [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr): A Plugin to transforme SVGs to React Components.
+- [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr): A Plugin to transform SVGs to React Components.
 - [Eslint](https://eslint.org/): Static code analysis tool to find problematic patterns inside JavaScript / TypeScript
 
 # `📧` Get in contact
@@ -89,7 +89,7 @@ Contributions are very welcomed, and you can contribute in many diffrent ways:
 - Contribute to the Project by creating your own Components.
 - Contribute to the Project by giving others ideas for what to implement next.
 - Contribute to the Project by Reporting Bugs.
-- Contribute to the Project by giving us feedback so we can improve.
+- Contribute to the Project by giving us feedback, so we can improve.
 - **But most importantly, your presence and support are valuable contributions to the project.**
 
 > Please read [`CONTRIBUTING`](CONTRIBUTING.md) for the process to submitting pull requests.
@@ -102,9 +102,9 @@ Contributions are very welcomed, and you can contribute in many diffrent ways:
 ---
 
 <h3 align="center">
-  A ⭐️ to <b>Awesome-Arts</b> to add yourself to the Milkyway 🌌.
+  A ⭐️ to <b>Awesome-Arts</b> to add yourself to the Milky Way 🌌.
 </h3>
 
 <h4 align="center">
   And Stay Awesome
-</h3>
+</h4>
