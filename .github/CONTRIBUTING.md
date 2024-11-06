@@ -28,7 +28,7 @@ If you are willing to contribute to this project here is a step by step introduc
   - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
 - Use the template
 - Go to the artworkList and create a new entry look at the IArtworkItem to know what the props are
-- Now you have set up everything and your Artwork should render inside the application, you're ready to get creative.
+- Now you have set up everything and your Component should render inside the application, you're ready to get creative.
 
 ## Pull Request
 - [Component](#component)
