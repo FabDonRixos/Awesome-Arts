@@ -1,6 +1,7 @@
 # Description
 
-Please include a summary of the changes and reference the issue. Please also include relevant motivation and context. List any dependencies that are required for this change.
+Please include a summary of the changes and reference the issue. Please also include relevant motivation and context.
+List any dependencies that are required for this change.
 
 Used issue # (fill in your issue)
 
@@ -12,7 +13,7 @@ Used issue # (fill in your issue)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 
 # Checklist:
-  
+
 - [ ] My code follows the style guidelines of this project.
 - [ ] I have updated my code state to the newest version.
 - [ ] I have performed a self-review of my code.
@@ -32,6 +33,7 @@ Used issue # (fill in your issue)
 
 ## Feature specific
 
-- [ ] My new Feature does not affect the styling and the functioning of other thing, in a way, so they don't work anymore.
+- [ ] My new Feature does not affect the styling and the functioning of other thing, in a way, so they don't work
+  anymore.
 - [ ] If I edited some core files of the project I have checked the code extra carefully.
 - [ ] If the new feature have UI changes, I have made them responsive as good as possible.
