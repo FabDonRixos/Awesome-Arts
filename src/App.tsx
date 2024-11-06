@@ -1,8 +1,8 @@
-import Header from "./components/header/Header.tsx";
+import Header from "./website/header/Header.tsx";
 import {useState} from "react";
 import {EArtworkTags} from "./artworks/0_artworks-list/artworkTags.ts";
 import artworksList from "./artworks/0_artworks-list/artworksList.tsx";
-import Component from "./components/component/Component.tsx";
+import Artwork from "./website/artwork/Artwork.tsx";
 
 function App() {
     const [currentTag, setCurrentTag] = useState<EArtworkTags>();
@@ -33,7 +33,7 @@ function App() {
                 <div className={"component-list"}>
                     {filteredArtworks.length > 0 ?
                         filteredArtworks.map(artwork =>
-                            <Component key={artworksList.indexOf(artwork)} artwork={artwork}/>
+                            <Artwork key={artworksList.indexOf(artwork)} artwork={artwork}/>
                         ) : (
                             <div className={"no-components-found"}>
                                 <span>No Components where found corresponding to the current filter settings.</span>

@@ -7,22 +7,22 @@
 <h4 align="center">Create CSS Only components or just get inspired by them</h4>
 
 <p align="center">
-  <a href="http://creativecommons.org/publicdomain/zero/1.0/" >
-    <img src="https://img.shields.io/github/license/FabDonRixos/awesome-arts" />
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" >
+    <img src="https://img.shields.io/github/license/FabDonRixos/awesome-arts" alt="licence" />
   </a>
   
   <a href="https://github.com/FabDonRixos/awesome-arts/tags" >
-    <img src="https://img.shields.io/github/v/tag/FabDonRixos/awesome-arts" />
+    <img src="https://img.shields.io/github/v/tag/FabDonRixos/awesome-arts" alt="tags" />
   </a>
   
-  <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" />
+  <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="open-source" />
   
   <a href="https://github.com/FabDonRixos/awesome-arts.git" >
     <img src="https://img.shields.io/badge/Contributions-are_welcomed-green.svg" alt="Contributions are welcomed" />
   </a>
   
   <a href="https://awesome-arts.fabian.li/" >
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fawesome-arts.fabian.li" />
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fawesome-arts.fabian.li" alt="website" />
   </a>
 </p>
 
@@ -38,7 +38,7 @@
 
 <!-- [![Stargazers over time](https://starchart.cc/FabDonRixos/awesome-arts.svg?variant=adaptive)](https://starchart.cc/FabDonRixos/awesome-arts) -->
 
-# `🖐️` Introducion `Awesome-Arts`
+# `🖐️` Introduction `Awesome-Arts`
 `Awesome-Arts` is an open-source repository designed to showcase your amazing and inspiring CSS-only artworks. Join our community of creative developers and share your unique designs while exploring the endless possibilities of CSS art. Contribute your creations and inspire others!
 
 > \[!IMPORTANT]
@@ -70,7 +70,7 @@ npm start
 - [React vite](https://vite.dev/guide/): The best React-based framework in the universum.
 - [TypeScript](https://www.typescriptlang.org/): A programming language that adds static typing to JavaScript.
 - [Sass/Scss](https://sass-lang.com/guide/): A preprocessor, that interpreted or compiled into CSS,
-- [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr): A Plugin to transforme SVGs to React Components.
+- [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr): A Plugin to transform SVGs to React Components.
 - [Eslint](https://eslint.org/): Static code analysis tool to find problematic patterns inside JavaScript / TypeScript
 
 # `📧` Get in contact
@@ -85,16 +85,16 @@ This project was licensed under the CC0-1.0 License.
 See [`License`](LICENSE) for details.
 
 # `🤝` Contributing to `Awesome-Arts`
-Contributions are very welcomed, and you can contribute in many diffrent ways:
+Contributions are very welcomed, and you can contribute in many different ways:
 - Contribute to the Project by creating your own Components.
 - Contribute to the Project by giving others ideas for what to implement next.
 - Contribute to the Project by Reporting Bugs.
-- Contribute to the Project by giving us feedback so we can improve.
+- Contribute to the Project by giving us feedback, so we can improve.
 - **But most importantly, your presence and support are valuable contributions to the project.**
 
-> Please read [`CONTRIBUTING`](CONTRIBUTING.md) for the process to submitting pull requests.
+> Please read [`CONTRIBUTING`](.github/CONTRIBUTING.md) for the process to submitting pull requests.
 > 
-> Please read [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md) to lern about our standards.
+> Please read [`CODE OF CONDUCT`](.github/CODE_OF_CONDUCT.md) to lern about our standards.
 
 # `💕` Support
 💚 Thanks for your support to the Project. We are very pleased to have you here.
@@ -102,9 +102,9 @@ Contributions are very welcomed, and you can contribute in many diffrent ways:
 ---
 
 <h3 align="center">
-  A ⭐️ to <b>Awesome-Arts</b> to add yourself to the Milkyway 🌌.
+  A ⭐️ to <b>Awesome-Arts</b> to add yourself to the Milky Way 🌌.
 </h3>
 
 <h4 align="center">
   And Stay Awesome
-</h3>
+</h4>

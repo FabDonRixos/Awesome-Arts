@@ -1,6 +1,6 @@
 import {IconLogo, IconFabian, IconGithub, IconLinkedin} from "../../assets/iconLibrary.ts";
-import style from "./header.module.scss";
 import {EArtworkTags} from "../../artworks/0_artworks-list/artworkTags.ts";
+import style from "./header.module.scss";
 
 interface InputsProps {
     setCurrentTag: (currentTag: EArtworkTags) => void;
