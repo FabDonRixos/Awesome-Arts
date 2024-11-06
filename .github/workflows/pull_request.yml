@@ -1,0 +1,31 @@
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Set up Node.js v18.20.4
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.20.4
+
+      - name: ✅ Check Node Dependencies
+        run: |
+          npm ci
+          npm run build
+
+      - name: ✅ Run ESLint
+        run: npm run lint
+
+      - name: ✅ Run Prettier Check
+        run: npm run prettier:check
+
+      - name: ✅ Run TypeScript Type Check
+        run: npm run tsc

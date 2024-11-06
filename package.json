@@ -15,7 +15,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "prettier:check": "prettier --check .",
-    "prettier:format": "prettier --write ."
+    "prettier:format": "prettier --write .",
+    "tsc": "npx tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.3.1",
