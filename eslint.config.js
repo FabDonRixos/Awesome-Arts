@@ -1,9 +1,9 @@
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginTypescript from "@typescript-eslint/eslint-plugin";
+import eslintParser from "@typescript-eslint/parser";
 import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
 import eslintPluginPrettier from "eslint-plugin-prettier";
-import eslintParser from "@typescript-eslint/parser";
 import eslintPluginHtml from "eslint-plugin-html";
 
 export default [
