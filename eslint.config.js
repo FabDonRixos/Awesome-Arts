@@ -8,8 +8,8 @@ import eslintPluginHtml from "eslint-plugin-html";
 
 export default [
     {
-        files: ["**/*.{ts,tsx,js,jsx,html}"],
-        ignores: ["dist/"],
+        files: ["src/**/*.{ts,tsx,js,jsx,html, css, scss}"],
+        ignores: ["dist/", "node_modules/"],
         languageOptions: {
             parser: eslintParser,
             parserOptions: {
