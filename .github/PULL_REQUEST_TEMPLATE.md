@@ -12,7 +12,7 @@ Used issue # (fill in your issue)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 
 # Checklist:
-  
+
 - [ ] My code follows the style guidelines of this project.
 - [ ] I have updated my code state to the newest version.
 - [ ] I have performed a self-review of my code.
@@ -21,7 +21,7 @@ Used issue # (fill in your issue)
 - [ ] My changes generate no new warnings or errors inside the console.
 - [ ] It's easy to see what issue was used for these changes.
 - [ ] I have only used module css classes, with exception for some part where you can use the index.scss.
-- [ ] I have read the [`CODE OF CONDUCT`](../CODE_OF_CONDUCT.md) & the [`CONTRIBUTING`](../CONTRIBUTING.md).
+- [ ] I have read the [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md) & the [`CONTRIBUTING`](CONTRIBUTING.md).
 
 ## Components specific
 
