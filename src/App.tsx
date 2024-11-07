@@ -1,10 +1,10 @@
+import { ReactElement, useState } from "react";
 import Header from "./website/header/Header.tsx";
-import { useState } from "react";
+import Artwork from "./website/artwork/Artwork.tsx";
 import { EArtworkTags } from "./artworks/0_artworks-list/artworkTags.ts";
 import artworksList from "./artworks/0_artworks-list/artworksList.tsx";
-import Artwork from "./website/artwork/Artwork.tsx";
 
-function App() {
+function App(): ReactElement {
     const [currentTag, setCurrentTag] = useState<EArtworkTags>();
     const [search, setSearch] = useState("");
 

@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { IconLogo, IconFabian, IconGithub, IconLinkedin } from "../../assets/iconLibrary.ts";
 import { EArtworkTags } from "../../artworks/0_artworks-list/artworkTags.ts";
 import style from "./header.module.scss";
@@ -9,7 +10,7 @@ interface InputsProps {
     search: string;
 }
 
-export default function Header(props: InputsProps) {
+export default function Header(props: InputsProps): ReactElement {
     return (
         <header className={style.header}>
             <div className={style.top}>
@@ -39,7 +40,7 @@ export default function Header(props: InputsProps) {
     );
 }
 
-function Inputs({ setCurrentTag, setSearch, currentTag, search }: InputsProps) {
+function Inputs({ setCurrentTag, setSearch, currentTag, search }: InputsProps): ReactElement {
     return (
         <>
             <input
