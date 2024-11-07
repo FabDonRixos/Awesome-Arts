@@ -21,5 +21,5 @@ export enum EArtworkTags {
     FILM_SERIES_VIDEOS = "Film / Series / Videos",
     PIXEL_ART = "Pixel Art",
     INPUTS = "Inputs (text, button, etc.)",
-    DEV = "DEV"
+    DEV = "DEV",
 }

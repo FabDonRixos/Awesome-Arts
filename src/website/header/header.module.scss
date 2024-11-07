@@ -39,7 +39,8 @@
     margin-left: 1rem;
 
     @media (max-width: 991px) {
-      & .search, & .filters {
+      & .search,
+      & .filters {
         display: none;
       }
     }
@@ -86,6 +87,7 @@
   }
 }
 
-.search, .filters {
+.search,
+.filters {
   width: 10rem;
 }

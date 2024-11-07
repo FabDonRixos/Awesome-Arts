@@ -1,12 +1,12 @@
 on:
-  workflow_dispatch:
-
-permissions:
-  contents: write
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  deploy:
+  check:
     runs-on: ubuntu-latest
+
     steps:
       - name: 🛒 Checkout code
         uses: actions/checkout@v4
@@ -16,13 +16,16 @@ jobs:
         with:
           node-version: 18.20.4
 
-      - name: 🛠️ Install and Build
+      - name: ✅ Check Node Dependencies
         run: |
           npm ci
           npm run build
 
-      - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
-          branch: gh-pages
+      - name: ✅ Run ESLint
+        run: npm run lint
+
+      - name: ✅ Run Prettier Check
+        run: npm run prettier:check
+
+      - name: ✅ Run TypeScript Type Check
+        run: npm run tsc
