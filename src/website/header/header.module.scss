@@ -4,6 +4,19 @@
   background-color: #121212;
   border-bottom: 1px solid #444444;
   padding: 1rem 2rem;
+  box-shadow: 0 10px 100px #03dc001f;
+
+  animation: StartUpBeam 1s cubic-bezier(0, 0.5, 1, 0.1);
+}
+
+@keyframes StartUpBeam {
+  0%,
+  20% {
+    box-shadow: 0 100vh 100px #03dc0040;
+  }
+  100% {
+    box-shadow: 0 10px 100px #03dc001f;
+  }
 }
 
 .top {
@@ -65,7 +78,7 @@
           height: 2.5rem;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 542px) and (min-width: 403px) {
           &:not(:first-child) {
             display: none;
           }
