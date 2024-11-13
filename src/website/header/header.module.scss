@@ -4,6 +4,18 @@
   background-color: #121212;
   border-bottom: 1px solid #444444;
   padding: 1rem 2rem;
+  box-shadow: 0 10px 100px #03dc0040;
+
+  animation: Start-Up-Beam 0.75s cubic-bezier(0, 0.5, 1, 0.1);
+}
+
+@keyframes Start-Up-Beam {
+  0% {
+    box-shadow: 0 100vh 100px #03dc00bf;
+  }
+  100% {
+    box-shadow: 0 10px 100px #03dc0040;
+  }
 }
 
 .top {
