@@ -11,9 +11,13 @@ export default function Artwork({ artwork }: ArtWrapperProps): ReactElement {
         <div
             className={`${style.component} ${artwork.full ? `${style.full}` : undefined}`}
             style={
-                artwork.backgroundColor && artwork.backgroundColor.length <= 7
-                    ? ({ "--background-color": artwork.backgroundColor } as CSSProperties)
-                    : ({ "--background-color": "#000000" } as CSSProperties)
+                {
+                    "--background-color":
+                        artwork.backgroundColor && artwork.backgroundColor.length <= 7
+                            ? artwork.backgroundColor
+                            : "#000000",
+                    "--text-color": artwork.textColor && artwork.textColor.length <= 7 ? artwork.textColor : "#ffffff",
+                } as CSSProperties
             }
         >
             <div className={style.content}>{artwork.component}</div>

@@ -42,7 +42,7 @@ export default [
             "import/order": [
                 "warn",
                 {
-                    groups: ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"],
+                    groups: ["builtin", "external", "internal", ["parent", "sibling"], "index", "unknown"],
                     pathGroups: [
                         {
                             pattern: "**/*.scss",
