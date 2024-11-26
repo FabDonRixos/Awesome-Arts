@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Template from "../0_template/Template.tsx";
 import { EArtworkTags } from "./artworkTags.ts";
+import YinYang from "../YinYang/YinYang.tsx";
 
 export interface ILink {
     name: string;
@@ -22,19 +22,14 @@ export interface IArtworkItem {
 
 const artworksList: IArtworkItem[] = [
     {
-        component: <Template />,
-        titel: "circle",
-        description: "round circle",
+        component: <YinYang />,
+        titel: "Yin Yang",
+        description: "The Symbol of Balance between everything",
         gitHubName: "FabDonRixos",
-        tags: [EArtworkTags.SIMPLE],
-        backgroundColor: "#000000",
-        textColor: "#ffffff",
-        full: true,
-        oneLink: {
-            name: "fabian.li",
-            href: "https://fabian.li",
-        },
-        editedAt: new Date("2024-10-26"),
+        tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
+        backgroundColor: "#fff",
+        textColor: "#000",
+        editedAt: new Date("2024-11-26"),
     },
 ];
 
