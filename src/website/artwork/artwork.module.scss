@@ -43,6 +43,7 @@
     gap: 0.5rem;
     border-top: #737373 1px solid;
     background-color: rgba(255, 255, 255, 0.25);
+    color: var(--text-color);
     backdrop-filter: blur(10px);
     padding: 1rem;
     width: 100%;
@@ -54,14 +55,14 @@
       gap: 0.5rem;
 
       & a {
-        color: white;
+        color: var(--text-color);
         text-decoration: none;
-        border-bottom: 1px dotted white;
+        border-bottom: 1px dotted var(--text-color);
         width: fit-content;
 
         &:is(:hover, :focus) {
           outline: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid var(--text-color);
         }
       }
     }

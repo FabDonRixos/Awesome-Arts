@@ -14,6 +14,7 @@ export interface IArtworkItem {
     gitHubName: string;
     tags?: EArtworkTags[] | string[];
     backgroundColor?: `#${string}`; // No transparent backgrounds
+    textColor?: `#${string}`;
     full?: boolean; // Only use this if you really have no other but to claim more space.
     oneLink?: ILink;
     editedAt?: Date;
@@ -27,6 +28,7 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE],
         backgroundColor: "#000000",
+        textColor: "#ffffff",
         full: true,
         oneLink: {
             name: "fabian.li",
