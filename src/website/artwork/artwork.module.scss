@@ -91,7 +91,7 @@
       opacity: 0;
     }
 
-    &:is(:hover, :active, :focus, :focus-within) {
+    &:is(:hover) {
       box-shadow: 1px 1px 10px #ffffff80;
 
       .contribution {
