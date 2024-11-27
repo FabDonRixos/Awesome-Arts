@@ -29,7 +29,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
         backgroundColor: "#fff",
         textColor: "#000",
-        editedAt: new Date("2024-11-26"),
+        editedAt: new Date("2024-11-27"),
     },
 ];
 
