@@ -11,7 +11,7 @@ export default function YinYang(): ReactElement {
                         <div className={style.yang} />
                     </div>
                     <ul className={style.yangList}>
-                        <li>YANG 阳</li>
+                        <li>YANG 陽</li>
                         <li>White</li>
                         <li>Positiv</li>
                         <li>Logical</li>
@@ -22,7 +22,7 @@ export default function YinYang(): ReactElement {
                         <div className={style.yin} />
                     </div>
                     <ul className={style.yinList}>
-                        <li>YIN 阴</li>
+                        <li>YIN 陰</li>
                         <li>Black</li>
                         <li>Negativ</li>
                         <li>Intuitive</li>

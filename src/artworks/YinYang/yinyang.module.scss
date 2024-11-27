@@ -1,4 +1,4 @@
-$size: 15rem;
+$size: 15;
 $yin: #000000;
 $yang: #ffffff;
 
@@ -30,18 +30,19 @@ $yang: #ffffff;
 
 .yinYang {
   position: relative;
-  width: $size;
-  height: $size;
+  width: #{$size}rem;
+  height: #{$size}rem;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 100px #000;
+  box-shadow: 0 0 100px black;
   outline: 1px black dashed;
   outline-offset: 7.5px;
+  font-size: calc($size * 1.0667px);
 
   & > div {
     position: absolute;
-    height: calc($size / 2);
-    width: $size;
+    height: calc(#{$size}rem / 2);
+    width: #{$size}rem;
   }
 
   & .dividerCircle {
@@ -49,8 +50,8 @@ $yang: #ffffff;
     border-radius: 50%;
     background: inherit;
     background-size: 200% 200%;
-    width: calc($size / 2);
-    height: calc($size / 2);
+    width: calc(#{$size}rem / 2);
+    height: calc(#{$size}rem / 2);
     z-index: 1;
   }
 
@@ -132,8 +133,8 @@ $yang: #ffffff;
   & .yang {
     position: absolute;
     border-radius: 50%;
-    width: calc($size / 6);
-    height: calc($size / 6);
+    width: calc(#{$size}rem / 6);
+    height: calc(#{$size}rem / 6);
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
