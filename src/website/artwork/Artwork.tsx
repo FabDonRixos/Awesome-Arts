@@ -34,7 +34,9 @@ export default function Artwork({ artwork }: ArtWrapperProps): ReactElement {
                     )}
                 </div>
                 <h1>{artwork.titel}</h1>
-                {artwork.editedAt && <span>{artwork.editedAt.toLocaleDateString()}</span>}
+                {artwork.editedAt && (
+                    <span className={style.component_date}>{artwork.editedAt.toLocaleDateString()}</span>
+                )}
             </div>
         </div>
     );
