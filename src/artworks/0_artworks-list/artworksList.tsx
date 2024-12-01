@@ -17,7 +17,7 @@ export interface IArtworkItem {
     textColor?: `#${string}`;
     full?: boolean; // Only use this if you really have no other but to claim more space.
     oneLink?: ILink;
-    editedAt?: Date;
+    editedAt: Date;
 }
 
 const artworksList: IArtworkItem[] = [
