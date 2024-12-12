@@ -28,12 +28,12 @@
 
 <p align="center">
     <a href="https://awesome-arts.fabian.li" target="blank">Website</a>
-    ·
-    <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Report Bug</a>
-    ·
-    <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Request Feature</a>
-      ·
+    <-:->
     <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Suggest Components</a>
+    <-:->
+    <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Request Feature</a>
+    <-:->
+    <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Report Bug</a>
 </p>
 
 <!-- [![Stargazers over time](https://starchart.cc/FabDonRixos/awesome-arts.svg?variant=adaptive)](https://starchart.cc/FabDonRixos/awesome-arts) -->
@@ -49,6 +49,7 @@ Contribute your creations and inspire others!
 > **Star this Repository**, to stay updated on all new Additions \~ ⭐
 
 Check out my other projects:<br/>
+༼ つ ◕_◕ ༽つ<br/>
 [fabian.li »](https://fabian.li/home)<br/>
 [TranZero »](https://github.com/FabDonRixos/TranZero)
 
@@ -95,7 +96,7 @@ If you have any more questions about / suggestions for the project you can:
 
 - Message me via [mail](mailto:contact@fabian.li).
 - Create an [Issue](https://github.com/FabDonRixos/awesome-arts/issues/new/choose)
-- Join out [Discord server](https://discord.com/) (not yet opened)
+- Join my [Discord server](https://discord.com/) (not yet opened)
 
 # `🛡️` License
 
@@ -119,7 +120,7 @@ Contributions are very welcomed, and you can contribute in many different ways:
 
 # `💕` Support
 
-💚 Thanks for your support to the Project. We are very pleased to have you here.
+💚 Thanks for your support to the Project. I'm very pleased to have you here.
 
 ---
 
