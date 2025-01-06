@@ -10,14 +10,17 @@ $blue: #0000ff;
   width: 10rem;
 
   &:has(input[type="checkbox"]:not(:checked)) {
+    // It will break if you don't isolate it for the mix-blend-mode: screen because it would fully display white.
     isolation: isolate;
 
     & .circle {
+      // for the RGB Model
       mix-blend-mode: screen;
     }
   }
 
   & input[type="checkbox"]:checked ~ .circle {
+    // for the CMYK Model
     mix-blend-mode: difference;
   }
 }
