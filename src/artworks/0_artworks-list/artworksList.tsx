@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
 import YinYang from "../YinYang/YinYang.tsx";
+import ColorModel from "../ColorModel/ColorModel.tsx";
 
 export interface ILink {
     name: string;
@@ -30,6 +31,16 @@ const artworksList: IArtworkItem[] = [
         backgroundColor: "#fff",
         textColor: "#000",
         editedAt: new Date("2024-11-27"),
+    },
+    {
+        component: <ColorModel />,
+        titel: "Color Modal",
+        description: "A Color Model that displays all RGB colors and there mixes",
+        gitHubName: "FabDonRixos",
+        tags: [EArtworkTags.SIMPLE, EArtworkTags.ILLUSTRATIONS],
+        backgroundColor: "#f8f9fa",
+        textColor: "#000",
+        editedAt: new Date("2025-01-06"),
     },
 ];
 

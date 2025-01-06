@@ -1,0 +1,47 @@
+$red: #ff0000;
+$green: #00ff00;
+$blue: #0000ff;
+
+.colorModel {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 10rem;
+  width: 10rem;
+
+  &:has(input[type="checkbox"]:not(:checked)) {
+    isolation: isolate;
+
+    & .circle {
+      mix-blend-mode: screen;
+    }
+  }
+
+  & input[type="checkbox"]:checked ~ .circle {
+    mix-blend-mode: difference;
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.redCircle {
+  top: -2.6rem;
+  background-color: $red;
+}
+
+.greenCircle {
+  background-color: $green;
+  bottom: -2.6rem;
+  left: -3rem;
+}
+
+.blueCircle {
+  background-color: $blue;
+  bottom: -2.6rem;
+  right: -3rem;
+}
