@@ -16,8 +16,9 @@ Component.
   src
   ├── artworks
   │   ├── 0_artworks-list
-  │   │   ├── template.tsx
-  │   │   └── template.modle.scss
+  │   │   ├── artworksList.tsx
+  │   │   ├── artworkTags.ts
+  │   │   └── lazyLoad.ts
   │   │
   │   ├── 0_template
   │   │   ├── template.tsx
@@ -31,7 +32,8 @@ Component.
   ```
   - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
 - Use the template
-- Go to the artworkList and create a new entry look at the IArtworkItem to know what the props are
+- Go to LazyLoad and import your Component bases on the already existing Components.
+- Then go to the artworksList and create a new entry look at the IArtworkItem to know what props there are.
 - Now you have set up everything and your Component should render inside the application, you're ready to get creative.
 
 ## Pull Request
@@ -53,7 +55,7 @@ approved.
 - My Code is well-structured and easy to read for someone other to understand it properly.
 - If something could be unclear/complex for others to understand I have made a comment for this part.
 - If I use the full property I have mady my mind up and really need the extra space.
-- I haven't edited a file which is not my component files or the artworksList, else create a new [Feature](#feature).
+- I haven't edited a file which is not my component files, the artworksList or lazyLoad, else create a new [Feature](#feature).
 - I have only used module css classes.
 
 ### Feature
