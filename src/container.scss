@@ -1,0 +1,44 @@
+.container {
+  padding: 2rem 1rem;
+  max-width: min(80rem, 100%);
+  margin: 0 auto;
+
+  & .component-list {
+    &:not(:has(.no-components-found)) {
+      display: grid;
+      gap: 1rem;
+
+      grid-auto-flow: dense;
+
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @media (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 670px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    & .no-components-found {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  & .load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+
+    & button {
+      width: 50%;
+    }
+  }
+}

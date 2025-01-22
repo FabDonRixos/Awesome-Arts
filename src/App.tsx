@@ -3,6 +3,7 @@ import Header from "./website/header/Header.tsx";
 import Artwork from "./website/artwork/Artwork.tsx";
 import { EArtworkTags } from "./artworks/0_artworks-list/artworkTags.ts";
 import artworksList, { IArtworkItem } from "./artworks/0_artworks-list/artworksList.tsx";
+import "./container.scss";
 
 const shuffle = (array: IArtworkItem[]): IArtworkItem[] => {
     const newArray = [...array];
@@ -20,7 +21,7 @@ const shuffle = (array: IArtworkItem[]): IArtworkItem[] => {
 
 function App(): ReactElement {
     const [currentTag, setCurrentTag] = useState<EArtworkTags>();
-    const [currentlyLoadedArtworks, setCurrentlyLoadedArtworks] = useState(12);
+    const [currentlyLoadedArtworks, setCurrentlyLoadedArtworks] = useState(9);
     const [search, setSearch] = useState("");
 
     const shuffledArtworks = useMemo(() => {
