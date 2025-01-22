@@ -64,6 +64,17 @@ select {
       gap: 1rem;
     }
   }
+
+  .load-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    & button {
+      width: 50%;
+    }
+  }
 }
 
 .default-hidden-checkbox[type="checkbox"] {

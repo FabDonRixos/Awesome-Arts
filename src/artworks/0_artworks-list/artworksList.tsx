@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import YinYang from "../YinYang/YinYang.tsx";
-import ColorModel from "../ColorModel/ColorModel.tsx";
+import { YinYang, ColorModel } from "./lazyLoad.ts";
 
-export interface ILink {
+interface ILink {
     name: string;
     href: string;
 }
@@ -28,7 +27,7 @@ const artworksList: IArtworkItem[] = [
         description: "The Symbol of Balance between everything",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
-        backgroundColor: "#fff",
+        backgroundColor: "#ffffff",
         textColor: "#000",
         editedAt: new Date("2024-11-27"),
     },
