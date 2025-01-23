@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import { YinYang, ColorModel } from "./lazyLoad.ts";
+import { ColorModel, Cube, YinYang } from "./lazyLoad.ts";
 
 interface ILink {
     name: string;
@@ -40,6 +40,16 @@ const artworksList: IArtworkItem[] = [
         backgroundColor: "#f8f9fa",
         textColor: "#000",
         editedAt: new Date("2025-01-06"),
+    },
+    {
+        component: <Cube />,
+        titel: "3D Cube",
+        description: "A never ending, 3D rotating Cube with different Color ",
+        gitHubName: "FabDonRixos",
+        tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
+        backgroundColor: "#737c81",
+        textColor: "#fff",
+        editedAt: new Date("2025-01-23"),
     },
 ];
 

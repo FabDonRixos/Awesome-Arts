@@ -1,0 +1,81 @@
+$siteLength: 10rem;
+$halfSiteLength: calc($siteLength / 2);
+
+.cubeLabel input[type="checkbox"]:not(:checked) ~ .cubeWrapper {
+  --translateZ: translateZ(#{$halfSiteLength});
+}
+
+@keyframes cube-rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  20% {
+    transform: rotate3d(1, 1, 4, 45deg);
+  }
+  40% {
+    transform: rotate3d(1, 1, -1, 180deg);
+  }
+  60% {
+    transform: rotate3d(1, -1, 1, 45deg);
+  }
+  80% {
+    transform: rotate3d(-1, 1, 1, 45deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+}
+
+.cubeWrapper {
+  animation: cube-rotate 20s linear infinite paused;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  width: $siteLength;
+  height: $siteLength;
+
+  &:is(:hover, :focus, :active) {
+    animation-play-state: running;
+  }
+}
+
+.site {
+  position: absolute;
+  box-sizing: content-box;
+  width: $siteLength;
+  height: $siteLength;
+  backface-visibility: hidden;
+
+  &:nth-child(1) {
+    background-color: red;
+    transform: var(--translateZ,);
+  }
+
+  &:nth-child(2) {
+    background-color: yellow;
+    transform: rotateX(90deg) var(--translateZ,);
+  }
+
+  &:nth-child(3) {
+    background-color: green;
+    transform: rotateY(90deg) var(--translateZ,);
+  }
+
+  &:nth-child(4) {
+    background-color: blue;
+    transform: rotateY(-90deg) var(--translateZ,);
+  }
+
+  &:nth-child(5) {
+    background-color: orange;
+    transform: rotateX(-90deg) var(--translateZ,);
+  }
+
+  &:nth-child(6) {
+    background-color: blueviolet;
+    transform: rotateX(180deg) var(--translateZ,);
+  }
+}
+
+.shadow {
+}
