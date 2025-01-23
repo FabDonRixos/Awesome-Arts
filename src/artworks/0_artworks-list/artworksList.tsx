@@ -49,7 +49,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
         backgroundColor: "#737c81",
         textColor: "#fff",
-        editedAt: new Date("2025-01-23"),
+        editedAt: new Date("2025-01-24"),
     },
 ];
 
