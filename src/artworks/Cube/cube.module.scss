@@ -1,28 +1,54 @@
-$siteLength: 10rem;
+$siteLength: 8rem;
 $halfSiteLength: calc($siteLength / 2);
 
-.cubeLabel input[type="checkbox"]:not(:checked) ~ .cubeWrapper {
-  --translateZ: translateZ(#{$halfSiteLength});
+.cubeLabel {
+  --translateZ: ;
+
+  & input[type="checkbox"]:not(:checked) ~ .cubeWrapper {
+    --translateZ: translateZ(#{$halfSiteLength});
+  }
 }
 
 @keyframes cube-rotate {
   0% {
-    transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(1, 1, 1, 45deg);
+    scale: 1;
+  }
+  10% {
+    transform: rotate3d(1, 0, 0, -30deg);
+    scale: 1.125;
   }
   20% {
-    transform: rotate3d(1, 1, 4, 45deg);
+    transform: rotate3d(0, 1, 0, 60deg);
+  }
+  30% {
+    transform: rotate3d(0, 0, 1, 90deg);
+    scale: 1;
   }
   40% {
-    transform: rotate3d(1, 1, -1, 180deg);
+    transform: rotate3d(1, -1, 0, 120deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, -1, 150deg);
+    scale: 0.875;
   }
   60% {
-    transform: rotate3d(1, -1, 1, 45deg);
+    transform: rotate3d(-1, 1, 1, 230deg);
+  }
+  70% {
+    transform: rotate3d(1, 0, -1, 30deg);
+    scale: 1.1;
   }
   80% {
-    transform: rotate3d(-1, 1, 1, 45deg);
+    transform: rotate3d(-1, -1, 1, -120deg);
+  }
+  90% {
+    transform: rotate3d(0, -1, -1, 180deg);
+    scale: 0.95;
   }
   100% {
-    transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(1, 1, 1, 45deg);
+    scale: 1;
   }
 }
 
@@ -33,8 +59,15 @@ $halfSiteLength: calc($siteLength / 2);
   transform-origin: center;
   width: $siteLength;
   height: $siteLength;
+  z-index: 10;
 
-  &:is(:hover, :focus, :active) {
+  @media (hover: hover) {
+    &:is(:hover, :focus, :active) {
+      animation-play-state: running;
+    }
+  }
+
+  @media (hover: none) {
     animation-play-state: running;
   }
 }
@@ -45,37 +78,47 @@ $halfSiteLength: calc($siteLength / 2);
   width: $siteLength;
   height: $siteLength;
   backface-visibility: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 
   &:nth-child(1) {
     background-color: red;
-    transform: var(--translateZ,);
+    transform: var(--translateZ);
   }
 
   &:nth-child(2) {
     background-color: yellow;
-    transform: rotateX(90deg) var(--translateZ,);
+    transform: rotateX(90deg) var(--translateZ);
   }
 
   &:nth-child(3) {
     background-color: green;
-    transform: rotateY(90deg) var(--translateZ,);
+    transform: rotateY(90deg) var(--translateZ);
   }
 
   &:nth-child(4) {
     background-color: blue;
-    transform: rotateY(-90deg) var(--translateZ,);
+    transform: rotateY(-90deg) var(--translateZ);
   }
 
   &:nth-child(5) {
     background-color: orange;
-    transform: rotateX(-90deg) var(--translateZ,);
+    transform: rotateX(-90deg) var(--translateZ);
   }
 
   &:nth-child(6) {
     background-color: blueviolet;
-    transform: rotateX(180deg) var(--translateZ,);
+    transform: rotateX(180deg) var(--translateZ);
   }
 }
 
 .shadow {
+  position: absolute;
+  width: 15rem;
+  height: 10rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  filter: blur(10px);
+  bottom: 1rem;
+  left: 50%;
+  transform: rotateX(50deg) translateX(-50%);
+  border-radius: 50%;
 }

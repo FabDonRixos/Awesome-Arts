@@ -5,6 +5,7 @@ export default function Cube(): ReactElement {
     return (
         <label className={style.cubeLabel}>
             <input type={"checkbox"} className={"default-hidden-checkbox"} />
+
             <div className={style.cubeWrapper}>
                 <div className={style.site} />
                 <div className={style.site} />
@@ -12,9 +13,9 @@ export default function Cube(): ReactElement {
                 <div className={style.site} />
                 <div className={style.site} />
                 <div className={style.site} />
-
-                <div className={style.shadow} />
             </div>
+
+            <div className={style.shadow} />
         </label>
     );
 }
