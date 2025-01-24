@@ -11,44 +11,37 @@ $siteLength: 9rem;
 
 @keyframes cube-rotate {
   0% {
-    transform: rotate3d(1, 1, 1, 45deg);
-    scale: 1;
+    transform: rotate3d(1, 1, 1, 45deg) scale(1);
   }
   10% {
-    transform: rotate3d(1, 0, 0, -30deg);
-    scale: 1.125;
+    transform: rotate3d(1, 0, 0, -30deg) scale(1.125);
   }
   20% {
     transform: rotate3d(0, 1, 0, 60deg);
   }
   30% {
-    transform: rotate3d(0, 0, 1, 90deg);
-    scale: 1;
+    transform: rotate3d(0, 0, 1, 90deg) scale(1);
   }
   40% {
     transform: rotate3d(1, -1, 0, 120deg);
   }
   50% {
-    transform: rotate3d(0, 1, -1, 150deg);
-    scale: 0.875;
+    transform: rotate3d(0, 1, -1, 150deg) scale(0.875);
   }
   60% {
     transform: rotate3d(-1, 1, 1, 230deg);
   }
   70% {
-    transform: rotate3d(1, 0, -1, 30deg);
-    scale: 1.1;
+    transform: rotate3d(1, 0, -1, 30deg) scale(1.1);
   }
   80% {
     transform: rotate3d(-1, -1, 1, -120deg);
   }
   90% {
-    transform: rotate3d(0, -1, -1, 180deg);
-    scale: 0.95;
+    transform: rotate3d(0, -1, -1, 180deg) scale(0.95);
   }
   100% {
-    transform: rotate3d(1, 1, 1, 45deg);
-    scale: 1;
+    transform: rotate3d(1, 1, 1, 45deg) scale(1);
   }
 }
 
