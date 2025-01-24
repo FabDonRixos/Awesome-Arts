@@ -8,7 +8,6 @@ $blue: #0000ff;
   place-items: center;
   height: 10rem;
   width: 10rem;
-  z-index: 10;
 
   &:has(input[type="checkbox"]:not(:checked)) {
     // It will break if you don't isolate it for the mix-blend-mode: screen because it would fully display white.

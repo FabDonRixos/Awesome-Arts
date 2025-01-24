@@ -33,7 +33,7 @@ const artworksList: IArtworkItem[] = [
     },
     {
         component: <ColorModel />,
-        titel: "Color Modal",
+        titel: "Color Model",
         description: "A Color Model that displays all RGB colors and there mixes and the opposite the CMYK Model",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE, EArtworkTags.ILLUSTRATIONS],
