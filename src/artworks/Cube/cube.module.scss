@@ -53,24 +53,25 @@ $siteLength: 9rem;
 }
 
 .cubeWrapper {
-  animation: cube-rotate 20s linear infinite paused;
+  animation: cube-rotate 40s linear infinite paused;
   position: relative;
   transform-style: preserve-3d;
   transform-origin: center;
   width: $siteLength;
   height: $siteLength;
+  z-index: 1;
 
   @media (hover: hover) {
     &:is(:hover, :focus, :active) {
       animation-play-state: running;
-      z-index: 10;
+      z-index: 100;
     }
   }
 
   // It should still run if user can't activate it himself
   @media (hover: none) {
     animation-play-state: running;
-    z-index: 10;
+    z-index: 100;
   }
 }
 
@@ -117,9 +118,9 @@ $siteLength: 9rem;
   position: absolute;
   width: 15rem;
   height: 10rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   filter: blur(10px);
-  bottom: 1rem;
+  bottom: 0;
   left: 50%;
   transform: rotateX(50deg) translateX(-50%);
   border-radius: 50%;

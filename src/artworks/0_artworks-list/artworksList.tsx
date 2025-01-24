@@ -47,7 +47,7 @@ const artworksList: IArtworkItem[] = [
         description: "A never ending, 3D rotating Cube with different Color ",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
-        backgroundColor: "#737c81",
+        backgroundColor: "#597585",
         textColor: "#fff",
         editedAt: new Date("2025-01-24"),
     },
