@@ -1,10 +1,15 @@
 import eslintPluginReact from "eslint-plugin-react";
-import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginTypescript from "@typescript-eslint/eslint-plugin";
 import eslintParser from "@typescript-eslint/parser";
 import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
 import eslintPluginPrettier from "eslint-plugin-prettier";
+
+// @ts-ignore - Missing TypeScript definitions
+import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+// @ts-ignore - Missing TypeScript definitions
 import eslintPluginImport from "eslint-plugin-import";
+
+import { ESLint, Linter } from "eslint";
 
 export default [
     {
@@ -21,9 +26,9 @@ export default [
             },
         },
         plugins: {
+            "@typescript-eslint": eslintPluginTypescript as unknown as ESLint.Plugin,
             "react-hooks": eslintPluginReactHooks,
             "react-refresh": eslintPluginReactRefresh,
-            "@typescript-eslint": eslintPluginTypescript,
             react: eslintPluginReact,
             import: eslintPluginImport,
             prettier: eslintPluginPrettier,
@@ -33,6 +38,7 @@ export default [
             "@typescript-eslint/explicit-function-return-type": ["warn"],
             "@typescript-eslint/explicit-module-boundary-types": "off",
             "@typescript-eslint/no-explicit-any": "warn",
+
             "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
             "react-hooks/rules-of-hooks": "error",
             "react-hooks/exhaustive-deps": "warn",
@@ -42,19 +48,11 @@ export default [
             "import/order": [
                 "warn",
                 {
-                    groups: ["builtin", "external", "internal", ["parent", "sibling"], "index", "unknown"],
-                    pathGroups: [
-                        {
-                            pattern: "**/*.scss",
-                            group: "unknown",
-                            position: "after",
-                        },
-                    ],
-                    pathGroupsExcludedImportTypes: ["unknown"],
+                    groups: ["builtin", "external", "internal", ["parent", "sibling"], "index"],
                 },
             ],
 
             "prettier/prettier": "error",
         },
     },
-];
+] satisfies Linter.Config[];
