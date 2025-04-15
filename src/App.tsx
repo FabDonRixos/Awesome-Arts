@@ -30,6 +30,10 @@ function App(): ReactElement {
 
     const filteredArtworks = shuffledArtworks
         .filter((artwork) => (currentTag ? artwork.tags?.includes(currentTag) : true))
+        /*
+        Only display your Artwork your currently working on.
+        .filter((artwork) => artwork.titel === "Template")
+        */
         .filter((artwork) =>
             search
                 ? artwork.tags?.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
