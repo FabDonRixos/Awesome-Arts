@@ -57,7 +57,7 @@ const artworksList: IArtworkItem[] = [
         description: "A Atom Model of the Silicon Semimetal, a mix between a Rutherford and Bohr model in 3D.",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.COMPLEX, EArtworkTags.THREE_D, EArtworkTags.NATURE, EArtworkTags.ANIMATIONS],
-        backgroundColor: "#ffffff",
+        backgroundColor: "#97bafd",
         textColor: "#000",
         editedAt: new Date("2025-04-15"),
     },
