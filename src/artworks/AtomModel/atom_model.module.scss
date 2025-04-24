@@ -291,14 +291,6 @@
   width: 150px;
   height: 150px;
 
-  /*transform: rotateY(-60deg);
-  transform-style: preserve-3d;
-  perspective: 800px;
-
-  & .elektron {
-    transform: rotateY(60deg) rotate(-1deg);
-  }*/
-
   $child-count: 2;
 
   @for $i from 1 through $child-count {
@@ -317,14 +309,6 @@
   width: 225px;
   height: 225px;
 
-  /*transform: rotateY(70deg) rotateX(50deg);
-  transform-style: preserve-3d;
-  perspective: 800px;
-
-  & .elektron {
-    transform: rotateY(-70deg) rotateX(-50deg) rotate(-15deg);
-  }*/
-
   $child-count: 8;
 
   @for $i from 1 through $child-count {
@@ -342,14 +326,6 @@
 .ring3 {
   width: 300px;
   height: 300px;
-
-  /*transform: rotateY(-65deg) rotateX(50deg) rotate(180deg);
-  transform-style: preserve-3d;
-  perspective: 800px;
-
-  & .elektron {
-    transform: rotateY(65deg) rotateX(-50deg) rotate(19.75deg);
-  }*/
 
   $child-count: 4;
 
@@ -393,6 +369,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
 .legendProton {
