@@ -32,12 +32,12 @@ function App(): ReactElement {
         .filter((artwork) => (currentTag ? artwork.tags?.includes(currentTag) : true))
         /*
         Only display your Artwork your currently working on.
-        .filter((artwork) => artwork.titel === "Template")
+        .filter((artwork) => artwork.title === "Template")
         */
         .filter((artwork) =>
             search
                 ? artwork.tags?.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
-                  artwork.titel.toLowerCase().includes(search.toLowerCase()) ||
+                  artwork.title.toLowerCase().includes(search.toLowerCase()) ||
                   artwork.description.toLowerCase().includes(search.toLowerCase()) ||
                   artwork.gitHubName.toLowerCase().includes(search.toLowerCase()) ||
                   artwork.editedAt?.toLocaleDateString().toLowerCase().includes(search.toLowerCase())

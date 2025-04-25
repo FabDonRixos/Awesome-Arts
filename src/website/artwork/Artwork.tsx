@@ -31,7 +31,7 @@ export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactEl
                             </a>
                         )}
                     </div>
-                    <h1>{artwork.titel}</h1>
+                    <h1>{artwork.title}</h1>
                     {artwork.editedAt && (
                         <span className={style.component_date}>{artwork.editedAt.toLocaleDateString()}</span>
                     )}
