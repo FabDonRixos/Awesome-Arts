@@ -36,24 +36,24 @@ export default function AtomModel(): ReactElement {
                     <div className={style.neutron}></div>
                 </div>
                 <div className={style.ring1}>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
                 </div>
                 <div className={style.ring2}>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
                 </div>
                 <div className={style.ring3}>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
-                    <div className={style.elektron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
+                    <div className={style.electron}></div>
                 </div>
             </div>
             <div className={style.legend}>
@@ -67,7 +67,7 @@ export default function AtomModel(): ReactElement {
                         <span>14 Neutrons</span>
                     </li>
                     <li>
-                        <div className={style.legendElektron} />
+                        <div className={style.legendElectron} />
                         <span>14 Elektrons</span>
                     </li>
                 </ul>

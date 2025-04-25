@@ -9,40 +9,46 @@
 
 .proton,
 .neutron,
-.elektron {
+.electron::after {
   position: absolute;
 }
 
-.proton {
+.proton,
+.neutron,
+.electron::after,
+.legendProton,
+.legendNeutron,
+.legendElectron {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.proton,
+.legendProton {
   background: radial-gradient(circle at 5px 5px, #ff5959, #000000);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-.neutron {
+.neutron,
+.legendNeutron {
   background: radial-gradient(circle at 5px 5px, #ffe959, #000000);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-.elektron {
+.legendElectron {
+  background: radial-gradient(circle at 5px 5px, #5959ff, #000000);
+}
+
+.electron {
+  position: absolute;
   width: inherit;
   height: inherit;
 
   &::after {
     content: "";
-    position: absolute;
     top: 0;
     left: 50%;
     background: radial-gradient(circle at 5px 5px, #5959ff, #000000);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
   }
 }
 
@@ -241,8 +247,8 @@
     & .ring1,
     & .ring2,
     & .ring3 {
-      & .elektron,
-      & .elektron::after {
+      & .electron,
+      & .electron::after {
         animation-play-state: running;
       }
     }
@@ -253,8 +259,8 @@
   .ring1,
   .ring2,
   .ring3 {
-    & .elektron,
-    & .elektron::after {
+    & .electron,
+    & .electron::after {
       animation-play-state: running;
     }
   }
@@ -329,21 +335,22 @@
   $child-count: 2;
 
   @for $i from 1 through $child-count {
-    & .elektron:nth-child(#{$i}) {
+    & .electron:nth-child(#{$i}) {
+      $duration: 5s;
       $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 72 - 7.5 * 1s;
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 7.5;
 
       rotate: calc($angle + var(--angle-ring1));
       animation:
-        animation-ring1 5s linear $delay infinite paused,
-        rotate-rings 5s linear infinite paused,
-        z-index-ring1 5s linear $delay infinite paused;
+        animation-ring1 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused,
+        z-index-ring1 $duration linear $delay infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring1)));
         animation:
-          rotate-rings 5s linear infinite paused,
-          electron-scale-horizontal 5s linear $delay infinite paused;
+          rotate-rings $duration linear infinite paused,
+          electron-scale-horizontal $duration linear $delay infinite paused;
       }
     }
   }
@@ -398,21 +405,22 @@
   $child-count: 8;
 
   @for $i from 1 through $child-count {
-    & .elektron:nth-child(#{$i}) {
+    & .electron:nth-child(#{$i}) {
+      $duration: 10s;
       $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 36 - 15 * 1s;
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 15;
 
       rotate: calc($angle + var(--angle-ring2));
       animation:
-        animation-ring2 10s linear $delay infinite paused,
-        rotate-rings 10s linear infinite paused,
-        z-index-ring2 10s linear $delay infinite paused;
+        animation-ring2 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused,
+        z-index-ring2 $duration linear $delay infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring2)));
         animation:
-          rotate-rings 10s linear infinite paused,
-          electron-scale-horizontal 10s linear $delay infinite paused;
+          rotate-rings $duration linear infinite paused,
+          electron-scale-horizontal $duration linear $delay infinite paused;
       }
     }
   }
@@ -470,20 +478,21 @@
   $child-count: 4;
 
   @for $i from 1 through $child-count {
-    & .elektron:nth-child(#{$i}) {
+    & .electron:nth-child(#{$i}) {
+      $duration: 15s;
       $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 24 - 18.75 * 1s;
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 18.75;
 
       rotate: calc($angle + var(--angle-ring3));
       animation:
-        animation-ring3 15s linear $delay infinite paused,
-        rotate-rings 15s linear infinite paused;
+        animation-ring3 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring3)));
         animation:
-          rotate-rings 15s linear infinite paused,
-          electron-scale-vertical 15s linear $delay infinite paused;
+          rotate-rings $duration linear infinite paused,
+          electron-scale-vertical $duration linear $delay infinite paused;
       }
     }
   }
@@ -569,25 +578,4 @@
     display: flex;
     gap: 0.25rem;
   }
-}
-
-.legendProton,
-.legendNeutron,
-.legendElektron {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
-}
-
-.legendProton {
-  background: radial-gradient(circle at 5px 5px, #ff5959, #000000);
-}
-
-.legendNeutron {
-  background: radial-gradient(circle at 5px 5px, #ffe959, #000000);
-}
-
-.legendElektron {
-  background: radial-gradient(circle at 5px 5px, #5959ff, #000000);
 }
