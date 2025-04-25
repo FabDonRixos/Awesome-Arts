@@ -1,0 +1,581 @@
+// Not the prettiest code ever, but it works :-)
+
+.atom {
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  height: 10rem;
+}
+
+.proton,
+.neutron,
+.electron::after {
+  position: absolute;
+}
+
+.proton,
+.neutron,
+.electron::after,
+.legendProton,
+.legendNeutron,
+.legendElectron {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.proton,
+.legendProton {
+  background: radial-gradient(circle at 5px 5px, #ff5959, #000000);
+}
+
+.neutron,
+.legendNeutron {
+  background: radial-gradient(circle at 5px 5px, #ffe959, #000000);
+}
+
+.legendElectron {
+  background: radial-gradient(circle at 5px 5px, #5959ff, #000000);
+}
+
+.electron {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 50%;
+    background: radial-gradient(circle at 5px 5px, #5959ff, #000000);
+  }
+}
+
+.core {
+  position: relative;
+  width: 75px;
+  height: 75px;
+
+  & > .proton,
+  & > .neutron {
+    transform: translate(-50%, -50%);
+
+    &:nth-child(1) {
+      top: 50%;
+      left: 25%;
+      z-index: 2;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+    }
+
+    &:nth-child(3) {
+      top: 30%;
+      left: 35%;
+      z-index: 1;
+    }
+
+    &:nth-child(4) {
+      top: 25%;
+      left: 50%;
+      z-index: 2;
+    }
+
+    &:nth-child(5) {
+      top: 30%;
+      left: 65%;
+      z-index: 1;
+    }
+
+    &:nth-child(6) {
+      top: 50%;
+      left: 75%;
+      z-index: 2;
+    }
+
+    &:nth-child(7) {
+      top: 70%;
+      left: 65%;
+      z-index: 1;
+    }
+
+    &:nth-child(8) {
+      top: 75%;
+      left: 50%;
+      z-index: 2;
+    }
+
+    &:nth-child(9) {
+      top: 70%;
+      left: 35%;
+      z-index: 1;
+    }
+
+    &:nth-child(10) {
+      top: 30%;
+      left: 20%;
+      z-index: 4;
+    }
+
+    &:nth-child(11) {
+      top: 20%;
+      left: 30%;
+      z-index: 3;
+    }
+
+    &:nth-child(12) {
+      top: 20%;
+      left: 70%;
+      z-index: 3;
+    }
+
+    &:nth-child(13) {
+      top: 30%;
+      left: 80%;
+      z-index: 4;
+    }
+
+    &:nth-child(14) {
+      top: 80%;
+      left: 70%;
+      z-index: 3;
+    }
+
+    &:nth-child(15) {
+      top: 70%;
+      left: 80%;
+      z-index: 4;
+    }
+
+    &:nth-child(16) {
+      top: 80%;
+      left: 30%;
+      z-index: 3;
+    }
+
+    &:nth-child(17) {
+      top: 70%;
+      left: 20%;
+      z-index: 4;
+    }
+
+    &:nth-child(18) {
+      top: 40%;
+      left: 40%;
+      z-index: 3;
+    }
+
+    &:nth-child(19) {
+      top: 60%;
+      left: 60%;
+      z-index: 3;
+    }
+
+    &:nth-child(20) {
+      top: 55%;
+      left: 45%;
+      z-index: 6;
+    }
+
+    &:nth-child(21) {
+      top: 35%;
+      left: 60%;
+      z-index: 6;
+    }
+
+    &:nth-child(22) {
+      top: 50%;
+      left: 15%;
+      z-index: 6;
+    }
+
+    &:nth-child(23) {
+      top: 15%;
+      left: 50%;
+      z-index: 6;
+    }
+
+    &:nth-child(24) {
+      top: 50%;
+      left: 85%;
+      z-index: 6;
+    }
+
+    &:nth-child(25) {
+      top: 85%;
+      left: 50%;
+      z-index: 6;
+    }
+
+    &:nth-child(26) {
+      top: 50%;
+      left: 65%;
+      z-index: 6;
+    }
+
+    &:nth-child(27) {
+      top: 35%;
+      left: 35%;
+      z-index: 6;
+    }
+
+    &:nth-child(28) {
+      top: 65%;
+      left: 40%;
+      z-index: 6;
+    }
+  }
+}
+
+.ring1,
+.ring2,
+.ring3 {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  outline: 1px rgba(0, 0, 0, 0.1) solid;
+  outline-offset: -1px;
+  border-radius: 50%;
+}
+
+@media (hover: hover) {
+  .atom:hover {
+    & .ring1,
+    & .ring2,
+    & .ring3 {
+      & .electron,
+      & .electron::after {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .ring1,
+  .ring2,
+  .ring3 {
+    & .electron,
+    & .electron::after {
+      animation-play-state: running;
+    }
+  }
+}
+
+@property --angle-ring1 {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --angle-ring2 {
+  syntax: "<angle>";
+  initial-value: 180deg;
+  inherits: false;
+}
+
+@property --angle-ring3 {
+  syntax: "<angle>";
+  initial-value: 270deg;
+  inherits: false;
+}
+
+@keyframes rotate-rings {
+  to {
+    --angle-ring1: 360deg;
+    --angle-ring2: 540deg;
+    --angle-ring3: 630deg;
+  }
+}
+
+@keyframes electron-scale-horizontal {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 0.7;
+  }
+  50% {
+    scale: 1.2;
+  }
+  75% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes electron-scale-vertical {
+  0% {
+    scale: 1.2;
+  }
+  25% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.7;
+  }
+  75% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+
+.ring1 {
+  width: 100px;
+  height: 150px;
+
+  $child-count: 2;
+
+  @for $i from 1 through $child-count {
+    & .electron:nth-child(#{$i}) {
+      $duration: 5s;
+      $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 7.5;
+
+      rotate: calc($angle + var(--angle-ring1));
+      animation:
+        animation-ring1 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused,
+        z-index-ring1 $duration linear $delay infinite paused;
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring1)));
+        animation:
+          rotate-rings $duration linear infinite paused,
+          electron-scale-horizontal $duration linear $delay infinite paused;
+      }
+    }
+  }
+}
+
+@keyframes z-index-ring1 {
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 10;
+  }
+  75% {
+    z-index: 0;
+  }
+}
+
+@keyframes animation-ring1 {
+  0% {
+    height: 150px;
+  }
+  12.5% {
+    height: 110px;
+  }
+  25% {
+    height: 100px;
+  }
+  37.5% {
+    height: 110px;
+  }
+  50% {
+    height: 150px;
+  }
+  65.5% {
+    height: 110px;
+  }
+  75% {
+    height: 100px;
+  }
+  87.5% {
+    height: 110px;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
+.ring2 {
+  width: 150px;
+  height: 225px;
+
+  $child-count: 8;
+
+  @for $i from 1 through $child-count {
+    & .electron:nth-child(#{$i}) {
+      $duration: 10s;
+      $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 15;
+
+      rotate: calc($angle + var(--angle-ring2));
+      animation:
+        animation-ring2 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused,
+        z-index-ring2 $duration linear $delay infinite paused;
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring2)));
+        animation:
+          rotate-rings $duration linear infinite paused,
+          electron-scale-horizontal $duration linear $delay infinite paused;
+      }
+    }
+  }
+}
+
+@keyframes z-index-ring2 {
+  0% {
+    z-index: 10;
+  }
+  25% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 10;
+  }
+}
+
+@keyframes animation-ring2 {
+  0% {
+    height: 225px;
+  }
+  12.5% {
+    height: 170px;
+  }
+  25% {
+    height: 150px;
+  }
+  37.5% {
+    height: 170px;
+  }
+  50% {
+    height: 225px;
+  }
+  65.5% {
+    height: 170px;
+  }
+  75% {
+    height: 150px;
+  }
+  87.5% {
+    height: 170px;
+  }
+  100% {
+    height: 225px;
+  }
+}
+
+.ring3 {
+  width: 300px;
+  height: 100px;
+
+  $child-count: 4;
+
+  @for $i from 1 through $child-count {
+    & .electron:nth-child(#{$i}) {
+      $duration: 15s;
+      $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 18.75;
+
+      rotate: calc($angle + var(--angle-ring3));
+      animation:
+        animation-ring3 $duration linear $delay infinite paused,
+        rotate-rings $duration linear infinite paused;
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring3)));
+        animation:
+          rotate-rings $duration linear infinite paused,
+          electron-scale-vertical $duration linear $delay infinite paused;
+      }
+    }
+  }
+}
+
+@keyframes animation-ring3 {
+  0% {
+    height: 100px;
+  }
+  5% {
+    height: 100px;
+  }
+  12.25% {
+    height: 120px;
+  }
+  15.5% {
+    height: 150px;
+  }
+  20% {
+    height: 210px;
+  }
+  25% {
+    height: 300px;
+  }
+  30% {
+    height: 210px;
+  }
+  37.5% {
+    height: 130px;
+  }
+  43.75% {
+    height: 110px;
+  }
+  50% {
+    height: 100px;
+  }
+  55% {
+    height: 110px;
+  }
+  62.25% {
+    height: 140px;
+  }
+  65.5% {
+    height: 170px;
+  }
+  70% {
+    height: 210px;
+  }
+  75% {
+    height: 300px;
+  }
+  80% {
+    height: 210px;
+  }
+  87.5% {
+    height: 130px;
+  }
+  93.75% {
+    height: 110px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+.legend {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(5px);
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  & li {
+    display: flex;
+    gap: 0.25rem;
+  }
+}

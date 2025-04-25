@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import { ColorModel, Cube, YinYang } from "./lazyLoad.ts";
+import { ColorModel, Cube, YinYang, AtomModel } from "./lazyLoad.ts";
 
 interface ILink {
     name: string;
@@ -9,7 +9,7 @@ interface ILink {
 
 export interface IArtworkItem {
     component: ReactNode;
-    titel: string;
+    title: string;
     description: string;
     gitHubName: string;
     tags?: EArtworkTags[] | string[];
@@ -23,8 +23,8 @@ export interface IArtworkItem {
 const artworksList: IArtworkItem[] = [
     {
         component: <YinYang />,
-        titel: "Yin Yang",
-        description: "The Symbol of Balance between everything",
+        title: "Yin Yang",
+        description: "The Symbol of Balance between everything.",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
         backgroundColor: "#ffffff",
@@ -33,8 +33,8 @@ const artworksList: IArtworkItem[] = [
     },
     {
         component: <ColorModel />,
-        titel: "Color Model",
-        description: "A Color Model that displays all RGB colors and there mixes and the opposite the CMYK Model",
+        title: "Color Model",
+        description: "A Color Model that displays all RGB colors and there mixes and the opposite the CMYK Model.",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE, EArtworkTags.ILLUSTRATIONS],
         backgroundColor: "#f8f9fa",
@@ -43,13 +43,23 @@ const artworksList: IArtworkItem[] = [
     },
     {
         component: <Cube />,
-        titel: "3D Cube",
-        description: "A never ending, 3D rotating Cube with different Color ",
+        title: "3D Cube",
+        description: "A never ending, 3D rotating Cube with different Color.",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
         backgroundColor: "#597585",
         textColor: "#fff",
         editedAt: new Date("2025-01-24"),
+    },
+    {
+        component: <AtomModel />,
+        title: "Atom Model",
+        description: "A Atom Model of the Silicon Semimetal, a mix between a Rutherford and Bohr model in 3D.",
+        gitHubName: "FabDonRixos",
+        tags: [EArtworkTags.COMPLEX, EArtworkTags.THREE_D, EArtworkTags.NATURE, EArtworkTags.ANIMATIONS],
+        backgroundColor: "#97bafd",
+        textColor: "#000",
+        editedAt: new Date("2025-04-26"),
     },
 ];
 
