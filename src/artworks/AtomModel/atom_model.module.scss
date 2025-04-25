@@ -1,3 +1,5 @@
+// Not the prettiest code ever, but it works :-)
+
 .atom {
   display: grid;
   place-items: center;
@@ -335,7 +337,7 @@
       animation:
         animation-ring1 5s linear $delay infinite paused,
         rotate-rings 5s linear infinite paused,
-        /*z-index-ring1 5s linear $delay infinite paused*/;
+        z-index-ring1 5s linear $delay infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring1)));
@@ -347,17 +349,17 @@
   }
 }
 
-/*@keyframes z-index-ring1 {
-  0% {
+@keyframes z-index-ring1 {
+  25% {
     z-index: 0;
   }
-  75% {
+  50% {
     z-index: 10;
   }
-  100% {
+  75% {
     z-index: 0;
   }
-}*/
+}
 
 @keyframes animation-ring1 {
   0% {
@@ -403,7 +405,8 @@
       rotate: calc($angle + var(--angle-ring2));
       animation:
         animation-ring2 10s linear $delay infinite paused,
-        rotate-rings 10s linear infinite paused;
+        rotate-rings 10s linear infinite paused,
+        z-index-ring2 10s linear $delay infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring2)));
@@ -412,6 +415,21 @@
           electron-scale-horizontal 10s linear $delay infinite paused;
       }
     }
+  }
+}
+
+@keyframes z-index-ring2 {
+  0% {
+    z-index: 10;
+  }
+  25% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 10;
   }
 }
 
@@ -447,7 +465,7 @@
 
 .ring3 {
   width: 300px;
-  height: 125px;
+  height: 100px;
 
   $child-count: 4;
 
@@ -473,31 +491,37 @@
 
 @keyframes animation-ring3 {
   0% {
-    height: 125px;
+    height: 100px;
   }
   12.5% {
-    height: 150px;
+    height: 120px;
   }
   25% {
     height: 300px;
   }
   37.5% {
-    height: 160px;
-  }
-  50% {
     height: 125px;
   }
+  43.75% {
+    height: 115px;
+  }
+  50% {
+    height: 100px;
+  }
+  56.25% {
+    height: 115px;
+  }
   65.5% {
-    height: 180px;
+    height: 160px;
   }
   75% {
     height: 300px;
   }
   87.5% {
-    height: 150px;
+    height: 120px;
   }
   100% {
-    height: 125px;
+    height: 100px;
   }
 }
 
