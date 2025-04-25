@@ -226,15 +226,12 @@
 .ring1,
 .ring2,
 .ring3 {
+  display: grid;
+  place-items: center;
   position: absolute;
-  outline: 1px black solid;
+  outline: 1px rgba(0, 0, 0, 0.1) solid;
   outline-offset: -1px;
   border-radius: 50%;
-
-  & .elektron,
-  & .elektron::after {
-    animation: rotate-rings 5s linear infinite paused;
-  }
 }
 
 @media (hover: hover) {
@@ -282,13 +279,49 @@
 @keyframes rotate-rings {
   to {
     --angle-ring1: 360deg;
-    --angle-ring2: 360deg;
-    --angle-ring3: 360deg;
+    --angle-ring2: 540deg;
+    --angle-ring3: 630deg;
+  }
+}
+
+@keyframes electron-scale-horizontal {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 0.7;
+  }
+  50% {
+    scale: 1.2;
+  }
+  75% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes electron-scale-vertical {
+  0% {
+    scale: 1.2;
+  }
+  25% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.7;
+  }
+  75% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
   }
 }
 
 .ring1 {
-  width: 150px;
+  width: 100px;
   height: 150px;
 
   $child-count: 2;
@@ -296,17 +329,68 @@
   @for $i from 1 through $child-count {
     & .elektron:nth-child(#{$i}) {
       $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 72 - 7.5 * 1s;
+
       rotate: calc($angle + var(--angle-ring1));
+      animation:
+        animation-ring1 5s linear $delay infinite paused,
+        rotate-rings 5s linear infinite paused,
+        /*z-index-ring1 5s linear $delay infinite paused*/;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring1)));
+        animation:
+          rotate-rings 5s linear infinite paused,
+          electron-scale-horizontal 5s linear $delay infinite paused;
       }
     }
   }
 }
 
+/*@keyframes z-index-ring1 {
+  0% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 10;
+  }
+  100% {
+    z-index: 0;
+  }
+}*/
+
+@keyframes animation-ring1 {
+  0% {
+    height: 150px;
+  }
+  12.5% {
+    height: 110px;
+  }
+  25% {
+    height: 100px;
+  }
+  37.5% {
+    height: 110px;
+  }
+  50% {
+    height: 150px;
+  }
+  65.5% {
+    height: 110px;
+  }
+  75% {
+    height: 100px;
+  }
+  87.5% {
+    height: 110px;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
 .ring2 {
-  width: 225px;
+  width: 150px;
   height: 225px;
 
   $child-count: 8;
@@ -314,30 +398,106 @@
   @for $i from 1 through $child-count {
     & .elektron:nth-child(#{$i}) {
       $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 36 - 15 * 1s;
+
       rotate: calc($angle + var(--angle-ring2));
+      animation:
+        animation-ring2 10s linear $delay infinite paused,
+        rotate-rings 10s linear infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring2)));
+        animation:
+          rotate-rings 10s linear infinite paused,
+          electron-scale-horizontal 10s linear $delay infinite paused;
       }
     }
   }
 }
 
+@keyframes animation-ring2 {
+  0% {
+    height: 225px;
+  }
+  12.5% {
+    height: 170px;
+  }
+  25% {
+    height: 150px;
+  }
+  37.5% {
+    height: 170px;
+  }
+  50% {
+    height: 225px;
+  }
+  65.5% {
+    height: 170px;
+  }
+  75% {
+    height: 150px;
+  }
+  87.5% {
+    height: 170px;
+  }
+  100% {
+    height: 225px;
+  }
+}
+
 .ring3 {
   width: 300px;
-  height: 300px;
+  height: 125px;
 
   $child-count: 4;
 
   @for $i from 1 through $child-count {
     & .elektron:nth-child(#{$i}) {
       $angle: (360deg / $child-count) * ($i - 1);
+      $delay: (360 - ((360 / $child-count) * ($i - 1))) / 24 - 18.75 * 1s;
+
       rotate: calc($angle + var(--angle-ring3));
+      animation:
+        animation-ring3 15s linear $delay infinite paused,
+        rotate-rings 15s linear infinite paused;
 
       &::after {
         transform: translate(-50%, -50%) rotate(calc(360deg - $angle - var(--angle-ring3)));
+        animation:
+          rotate-rings 15s linear infinite paused,
+          electron-scale-vertical 15s linear $delay infinite paused;
       }
     }
+  }
+}
+
+@keyframes animation-ring3 {
+  0% {
+    height: 125px;
+  }
+  12.5% {
+    height: 150px;
+  }
+  25% {
+    height: 300px;
+  }
+  37.5% {
+    height: 160px;
+  }
+  50% {
+    height: 125px;
+  }
+  65.5% {
+    height: 180px;
+  }
+  75% {
+    height: 300px;
+  }
+  87.5% {
+    height: 150px;
+  }
+  100% {
+    height: 125px;
   }
 }
 
