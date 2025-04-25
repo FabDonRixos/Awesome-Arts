@@ -493,32 +493,56 @@
   0% {
     height: 100px;
   }
-  12.5% {
+  5% {
+    height: 100px;
+  }
+  12.25% {
     height: 120px;
+  }
+  15.5% {
+    height: 150px;
+  }
+  20% {
+    height: 210px;
   }
   25% {
     height: 300px;
   }
+  30% {
+    height: 210px;
+  }
   37.5% {
-    height: 125px;
+    height: 130px;
   }
   43.75% {
-    height: 115px;
+    height: 110px;
   }
   50% {
     height: 100px;
   }
-  56.25% {
-    height: 115px;
+  55% {
+    height: 110px;
+  }
+  62.25% {
+    height: 140px;
   }
   65.5% {
-    height: 160px;
+    height: 170px;
+  }
+  70% {
+    height: 210px;
   }
   75% {
     height: 300px;
   }
+  80% {
+    height: 210px;
+  }
   87.5% {
-    height: 120px;
+    height: 130px;
+  }
+  93.75% {
+    height: 110px;
   }
   100% {
     height: 100px;
@@ -538,7 +562,7 @@
   & ul {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 
   & li {
