@@ -1,8 +1,8 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: #121212;
-  border-bottom: 1px solid #444444;
+  background-color: #02060b;
+  border-bottom: 1px solid #202020;
   padding: 1rem 2rem;
   box-shadow: 0 10px 100px #03dc001f;
 
@@ -35,8 +35,8 @@
     gap: 1rem;
 
     & .logo {
-      width: 5rem;
-      height: 5rem;
+      width: 3rem;
+      height: 3rem;
     }
 
     @media (max-width: 403px) {
