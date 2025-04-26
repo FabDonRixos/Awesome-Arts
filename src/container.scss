@@ -6,7 +6,7 @@
   & .component-list {
     &:not(:has(.no-components-found)) {
       display: grid;
-      gap: 1rem;
+      gap: 2rem;
 
       grid-auto-flow: dense;
 
