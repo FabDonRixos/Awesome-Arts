@@ -242,30 +242,6 @@
   border-radius: 50%;
 }
 
-@media (hover: hover) {
-  .atom:hover {
-    & .ring1,
-    & .ring2,
-    & .ring3 {
-      & .electron,
-      & .electron::after {
-        animation-play-state: running;
-      }
-    }
-  }
-}
-
-@media (hover: none) {
-  .ring1,
-  .ring2,
-  .ring3 {
-    & .electron,
-    & .electron::after {
-      animation-play-state: running;
-    }
-  }
-}
-
 @property --angle-ring1 {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -558,6 +534,32 @@
   }
 }
 
+@media (hover: hover) {
+  .atom:hover {
+    & .ring1,
+    & .ring2,
+    & .ring3 {
+      & .electron,
+      & .electron::after {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .atom {
+    .ring1,
+    .ring2,
+    .ring3 {
+      & .electron,
+      & .electron::after {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
 .legend {
   position: absolute;
   top: 0.5rem;
@@ -567,6 +569,7 @@
   border-radius: 0.5rem;
   background-color: rgba(225, 225, 225, 0.5);
   backdrop-filter: blur(5px);
+  z-index: 100;
 
   & ul {
     display: flex;

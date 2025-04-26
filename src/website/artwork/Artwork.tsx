@@ -1,8 +1,24 @@
-import { CSSProperties, ReactElement, Suspense } from "react";
+import { CSSProperties, ReactElement, Suspense, useEffect, useState } from "react";
+import classNames from "classnames";
 import style from "./artwork.module.scss";
 import { IArtworkItem } from "../../artworks/0_artworks-list/artworksList.tsx";
 
 export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactElement {
+    const [open, setOpen] = useState(true);
+
+    useEffect(() => {
+        let timeout: number;
+        if (!open) {
+            timeout = setTimeout(() => {
+                setOpen(true);
+            }, 1000 * 30);
+        }
+
+        return (): void => {
+            clearTimeout(timeout);
+        };
+    }, [open]);
+
     return (
         <Suspense fallback={<div className={style.component}>Loading...</div>}>
             <div
@@ -19,7 +35,8 @@ export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactEl
                 }
             >
                 <div className={style.content}>{artwork.component}</div>
-                <div className={style.contribution}>
+                <div className={classNames(style.contribution, !open && style.closed)}>
+                    <div className={style.contributionHiding} onClick={() => setOpen(!open)} />
                     <div className={style.component_creator}>
                         <a href={`https://github.com/${artwork.gitHubName}/`} target={"_blank"}>
                             <span>© {artwork.gitHubName}</span>
