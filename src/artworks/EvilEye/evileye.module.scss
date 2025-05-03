@@ -38,7 +38,7 @@
   transition: all 650ms;
 }
 
-.navyShape:hover::before {
+.evilEyeWrapper:hover .navyShape::before {
   left: 100%;
 }
 

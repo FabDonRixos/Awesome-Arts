@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import style from "./evileye.module.scss";
 
-export default function Template(): ReactElement {
+export default function EvilEye(): ReactElement {
     return (
         <label className={style.evilEyeWrapper}>
             <div className={style.navy}>
