@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import { ColorModel, Cube, YinYang, AtomModel } from "./lazyLoad.ts";
+import { ColorModel, Cube, YinYang, AtomModel, EvilEye } from "./lazyLoad.ts";
 
 interface ILink {
     name: string;
@@ -60,6 +60,16 @@ const artworksList: IArtworkItem[] = [
         backgroundColor: "#97bafd",
         textColor: "#000",
         editedAt: new Date("2025-04-26"),
+    },
+    {
+        component: <EvilEye />,
+        title: "Evil Eye",
+        description: "Protective charm against harm or bad luck caused by envious or malevolent gazes.",
+        gitHubName: "3epge",
+        tags: [EArtworkTags.ILLUSTRATIONS, EArtworkTags.ANIMATIONS, EArtworkTags.SIMPLE],
+        backgroundColor: "#e4f0fc",
+        textColor: "#000",
+        editedAt: new Date("2025-05-02"),
     },
 ];
 
