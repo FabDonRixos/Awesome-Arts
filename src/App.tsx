@@ -1,9 +1,9 @@
 import { ReactElement, useMemo, useState } from "react";
 import { EArtworkTags } from "./artworks/0_ArtworksList/artworkTags.ts";
 import artworksList, { IArtworkItem } from "./artworks/0_ArtworksList/ArtworksList.tsx";
-import Header from "./Website/Header/Header.tsx";
-import Footer from "./Website/Footer/Footer.tsx";
-import Artwork from "./Website/Artwork/Artwork.tsx";
+import Header from "./website/Header/Header.tsx";
+import Footer from "./website/Footer/Footer.tsx";
+import Artwork from "./website/Artwork/Artwork.tsx";
 import style from "./container.module.scss";
 
 const shuffle = (array: IArtworkItem[]): IArtworkItem[] => {
