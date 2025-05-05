@@ -1,9 +1,8 @@
 # Description
 
-Please include a summary of the changes and reference the issue. Please also include relevant motivation and context.
-List any dependencies that are required for this change.
+**Make a small summary (summary, motivation, context, dependencies)**
 
-Used issue # (fill in your issue)
+Used issue **# (fill in your issue)**
 
 ## Type of change
 
@@ -24,14 +23,14 @@ Used issue # (fill in your issue)
 - [ ] I have only used module css classes, with exception for some part where you can use the index.scss.
 - [ ] I have read the [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md) & the [`CONTRIBUTING`](CONTRIBUTING.md).
 
-## Components specific
+## Components specific (Only for new Components)
 
 - [ ] The Component is somewhere unique to already other created components.
 - [ ] I have only used html and css to create my component, apart from the React component.
 - [ ] I have made the whole component myself and didn't steal it from someone other.
 - [ ] I have documented my own copyright statements inside the artwork List.
 
-## Feature specific
+## Feature specific (Only for new Features)
 
 - [ ] My new Feature does not affect the styling and the functioning of other thing, in a way, so they don't work
       anymore.

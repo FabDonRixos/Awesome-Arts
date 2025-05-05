@@ -1,10 +1,19 @@
-// Not the prettiest code ever, but it works :-)
+@use "sass:math";
 
+// Not the prettiest code ever, but it works :-)
 .atom {
+  position: relative;
   display: grid;
   place-items: center;
   width: 10rem;
   height: 10rem;
+
+  & > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .proton,
@@ -53,7 +62,6 @@
 }
 
 .core {
-  position: relative;
   width: 75px;
   height: 75px;
 
@@ -236,7 +244,6 @@
 .ring3 {
   display: grid;
   place-items: center;
-  position: absolute;
   outline: 1px rgba(0, 0, 0, 0.1) solid;
   outline-offset: -1px;
   border-radius: 50%;
@@ -313,8 +320,8 @@
   @for $i from 1 through $child-count {
     & .electron:nth-child(#{$i}) {
       $duration: 5s;
-      $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 7.5;
+      $angle: math.div(360deg, $child-count) * ($i - 1);
+      $delay: math.div(360 - math.div(360, $child-count) * ($i - 1), math.div(360, $duration)) - 7.5;
 
       rotate: calc($angle + var(--angle-ring1));
       animation:
@@ -383,8 +390,8 @@
   @for $i from 1 through $child-count {
     & .electron:nth-child(#{$i}) {
       $duration: 10s;
-      $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 15;
+      $angle: math.div(360deg, $child-count) * ($i - 1);
+      $delay: math.div(360 - math.div(360, $child-count) * ($i - 1), math.div(360, $duration)) - 15;
 
       rotate: calc($angle + var(--angle-ring2));
       animation:
@@ -456,8 +463,8 @@
   @for $i from 1 through $child-count {
     & .electron:nth-child(#{$i}) {
       $duration: 15s;
-      $angle: (360deg / $child-count) * ($i - 1);
-      $delay: (360 - 360 / $child-count * ($i - 1)) / (360 / $duration) - 18.75;
+      $angle: math.div(360deg, $child-count) * ($i - 1);
+      $delay: math.div(360 - math.div(360, $child-count) * ($i - 1), math.div(360, $duration)) - 18.75;
 
       rotate: calc($angle + var(--angle-ring3));
       animation:

@@ -55,6 +55,11 @@ jobs:
           echo "Bumping version as $VERSION_TYPE"
           echo "version=$(npm version $VERSION_TYPE --no-git-tag-version)" >> $GITHUB_OUTPUT
 
+      - name: 🔄 Update other Version Files
+        run: |
+          sed -i 's/VITE_VERSION="[^"]*"/VITE_VERSION="${{ steps.update_version.outputs.version }}"/' .env.production
+          sed -i 's/VITE_VERSION="[^"]*-DEV"/VITE_VERSION="${{ steps.update_version.outputs.version }}-DEV"/' .env.development
+
       - name: ✔️ Commit all changes
         run: |
           git add -A  # Add all changes, including unmodified files from development

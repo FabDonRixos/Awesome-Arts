@@ -15,13 +15,13 @@ Component.
   ```
   src
   ├── artworks
-  │   ├── 0_artworks-list
-  │   │   ├── artworksList.tsx
+  │   ├── 0_ArtworksList
+  │   │   ├── ArtworksList.tsx
   │   │   ├── artworkTags.ts
   │   │   └── lazyLoad.ts
   │   │
-  │   ├── 0_template
-  │   │   ├── template.tsx
+  │   ├── 0_Template
+  │   │   ├── Template.tsx
   │   │   └── template.modle.scss
   │   │
   │   └── (Your Component Name Camelcase)
