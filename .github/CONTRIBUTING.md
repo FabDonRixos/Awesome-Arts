@@ -14,7 +14,7 @@ Component.
 - Add your component (0 is just to make 0_artworks-list and 0_template stay at the top)
   ```
   src
-  ├── Artworks
+  ├── artworks
   │   ├── 0_ArtworksList
   │   │   ├── ArtworksList.tsx
   │   │   ├── artworkTags.ts
