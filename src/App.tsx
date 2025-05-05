@@ -1,9 +1,10 @@
 import { ReactElement, useMemo, useState } from "react";
-import Header from "./website/header/Header.tsx";
-import Artwork from "./website/artwork/Artwork.tsx";
-import { EArtworkTags } from "./artworks/0_artworks-list/artworkTags.ts";
-import artworksList, { IArtworkItem } from "./artworks/0_artworks-list/artworksList.tsx";
-import "./container.scss";
+import { EArtworkTags } from "./artworks/0_ArtworksList/artworkTags.ts";
+import artworksList, { IArtworkItem } from "./artworks/0_ArtworksList/ArtworksList.tsx";
+import Header from "./Website/Header/Header.tsx";
+import Footer from "./Website/Footer/Footer.tsx";
+import Artwork from "./Website/Artwork/Artwork.tsx";
+import style from "./container.module.scss";
 
 const shuffle = (array: IArtworkItem[]): IArtworkItem[] => {
     const newArray = [...array];
@@ -40,7 +41,7 @@ function App(): ReactElement {
                   artwork.title.toLowerCase().includes(search.toLowerCase()) ||
                   artwork.description.toLowerCase().includes(search.toLowerCase()) ||
                   artwork.gitHubName.toLowerCase().includes(search.toLowerCase()) ||
-                  artwork.editedAt?.toLocaleDateString().toLowerCase().includes(search.toLowerCase())
+                  artwork.createdAt?.toLocaleDateString().toLowerCase().includes(search.toLowerCase())
                 : true,
         );
 
@@ -51,14 +52,14 @@ function App(): ReactElement {
     return (
         <>
             <Header setCurrentTag={setCurrentTag} setSearch={setSearch} currentTag={currentTag} search={search} />
-            <div className={"container"}>
-                <div className={"component-list"}>
+            <div className={style.container}>
+                <div className={style.componentList}>
                     {filteredArtworks.length > 0 ? (
                         filteredArtworks
                             .slice(0, currentlyLoadedArtworks)
                             .map((artwork) => <Artwork key={shuffledArtworks.indexOf(artwork)} artwork={artwork} />)
                     ) : (
-                        <div className={"no-components-found"}>
+                        <div className={style.noComponentsFound}>
                             <span>No Components where found corresponding to the current filter settings.</span>
                             <button
                                 onClick={() => {
@@ -72,11 +73,12 @@ function App(): ReactElement {
                     )}
                 </div>
                 {filteredArtworks.length > 0 && filteredArtworks.length > currentlyLoadedArtworks && (
-                    <div className={"load-more"}>
+                    <div className={style.loadMore}>
                         <button onClick={loadMoreArtworks}>Load More</button>
                     </div>
                 )}
             </div>
+            <Footer />
         </>
     );
 }

@@ -1,7 +1,7 @@
 import { CSSProperties, ReactElement, Suspense, useEffect, useState } from "react";
 import classNames from "classnames";
 import style from "./artwork.module.scss";
-import { IArtworkItem } from "../../artworks/0_artworks-list/artworksList.tsx";
+import { IArtworkItem } from "../../artworks/0_ArtworksList/ArtworksList.tsx";
 
 export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactElement {
     const [open, setOpen] = useState(true);
@@ -49,8 +49,8 @@ export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactEl
                         )}
                     </div>
                     <h1>{artwork.title}</h1>
-                    {artwork.editedAt && (
-                        <span className={style.component_date}>{artwork.editedAt.toLocaleDateString()}</span>
+                    {artwork.createdAt && (
+                        <span className={style.component_date}>{artwork.createdAt.toLocaleDateString()}</span>
                     )}
                 </div>
             </div>

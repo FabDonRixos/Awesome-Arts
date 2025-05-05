@@ -3,7 +3,7 @@
   max-width: min(80rem, 100%);
   margin: 0 auto;
 
-  & .component-list {
+  & .componentList {
     &:not(:has(.no-components-found)) {
       display: grid;
       gap: 2rem;
@@ -21,7 +21,7 @@
       }
     }
 
-    & .no-components-found {
+    & .noComponentsFound {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,7 +31,7 @@
     }
   }
 
-  & .load-more {
+  & .loadMore {
     display: flex;
     justify-content: center;
     margin-top: 2rem;

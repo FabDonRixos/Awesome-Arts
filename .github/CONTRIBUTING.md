@@ -14,14 +14,14 @@ Component.
 - Add your component (0 is just to make 0_artworks-list and 0_template stay at the top)
   ```
   src
-  ├── artworks
-  │   ├── 0_artworks-list
-  │   │   ├── artworksList.tsx
+  ├── Artworks
+  │   ├── 0_ArtworksList
+  │   │   ├── ArtworksList.tsx
   │   │   ├── artworkTags.ts
   │   │   └── lazyLoad.ts
   │   │
-  │   ├── 0_template
-  │   │   ├── template.tsx
+  │   ├── 0_Template
+  │   │   ├── Template.tsx
   │   │   └── template.modle.scss
   │   │
   │   └── (Your Component Name Camelcase)

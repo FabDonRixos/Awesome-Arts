@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IconLogo, IconFabian, IconGithub, IconLinkedin } from "../../assets/iconLibrary.ts";
-import { EArtworkTags } from "../../artworks/0_artworks-list/artworkTags.ts";
+import { EArtworkTags } from "../../artworks/0_ArtworksList/artworkTags.ts";
 import style from "./header.module.scss";
 
 interface InputsProps {
@@ -21,13 +21,13 @@ export default function Header(props: InputsProps): ReactElement {
                 <div className={style.right}>
                     <Inputs {...props} />
                     <div className={style.links}>
-                        <a href="https://github.com/FabDonRixos/awesome-arts" target={"_blank"}>
+                        <a href={"https://github.com/FabDonRixos/awesome-arts"} target={"_blank"}>
                             <IconGithub />
                         </a>
-                        <a href="https://www.linkedin.com/in/fabian-mathys-42a595332/" target={"_blank"}>
+                        <a href={"https://www.linkedin.com/in/fabian-mathys-42a595332/"} target={"_blank"}>
                             <IconLinkedin />
                         </a>
-                        <a href="https://fabian.li" target={"_blank"}>
+                        <a href={"https://fabian.li"} target={"_blank"}>
                             <IconFabian />
                         </a>
                     </div>
@@ -45,7 +45,7 @@ function Inputs({ setCurrentTag, setSearch, currentTag, search }: InputsProps): 
         <>
             <input
                 className={style.search}
-                type="text"
+                type={"text"}
                 placeholder={"Search"}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}

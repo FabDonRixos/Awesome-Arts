@@ -36,7 +36,7 @@
     <a href="https://github.com/FabDonRixos/awesome-arts/issues/new/choose">Report Bug</a>
 </p>
 
-<!-- [![Stargazers over time](https://starchart.cc/FabDonRixos/awesome-arts.svg?variant=adaptive)](https://starchart.cc/FabDonRixos/awesome-arts) -->
+[![Stargazers over time](https://starchart.cc/FabDonRixos/awesome-arts.svg?variant=adaptive)](https://starchart.cc/FabDonRixos/awesome-arts)
 
 # `🖐️` Introduction `Awesome-Arts`
 
@@ -77,7 +77,7 @@ npm install
 4. Start the application
 
 ```
-npm start
+npm run dev
 ```
 
 5. Now you can open [localhost:5173](http://localhost:5173/)

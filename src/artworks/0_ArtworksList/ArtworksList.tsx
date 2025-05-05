@@ -17,7 +17,7 @@ export interface IArtworkItem {
     textColor?: `#${string}`;
     full?: boolean; // Only use this if you really have no other but to claim more space.
     oneLink?: ILink;
-    editedAt: Date;
+    createdAt: Date;
 }
 
 const artworksList: IArtworkItem[] = [
@@ -29,7 +29,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
         backgroundColor: "#ffffff",
         textColor: "#000",
-        editedAt: new Date("2024-11-27"),
+        createdAt: new Date("2024-11-27"),
     },
     {
         component: <ColorModel />,
@@ -39,7 +39,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.SIMPLE, EArtworkTags.ILLUSTRATIONS],
         backgroundColor: "#f8f9fa",
         textColor: "#000",
-        editedAt: new Date("2025-01-06"),
+        createdAt: new Date("2025-01-06"),
     },
     {
         component: <Cube />,
@@ -49,7 +49,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
         backgroundColor: "#597585",
         textColor: "#fff",
-        editedAt: new Date("2025-01-24"),
+        createdAt: new Date("2025-01-24"),
     },
     {
         component: <AtomModel />,
@@ -59,7 +59,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.COMPLEX, EArtworkTags.THREE_D, EArtworkTags.NATURE, EArtworkTags.ANIMATIONS],
         backgroundColor: "#97bafd",
         textColor: "#000",
-        editedAt: new Date("2025-04-26"),
+        createdAt: new Date("2025-04-26"),
     },
     {
         component: <EvilEye />,
@@ -69,7 +69,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.ILLUSTRATIONS, EArtworkTags.ANIMATIONS, EArtworkTags.SIMPLE],
         backgroundColor: "#e4f0fc",
         textColor: "#000",
-        editedAt: new Date("2025-05-02"),
+        createdAt: new Date("2025-05-02"),
     },
 ];
 
