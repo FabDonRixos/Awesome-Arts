@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import { ColorModel, Cube, YinYang, AtomModel, EvilEye } from "./lazyLoad.ts";
+import { ColorModel, Cube, YinYang, AtomModel, EvilEye, CameraShutter } from "./lazyLoad.ts";
 
 interface ILink {
     name: string;
@@ -28,7 +28,7 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.GRAPHICS, EArtworkTags.ANIMATIONS],
         backgroundColor: "#ffffff",
-        textColor: "#000",
+        textColor: "#000000",
         createdAt: new Date("2024-11-27"),
     },
     {
@@ -38,7 +38,7 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.SIMPLE, EArtworkTags.ILLUSTRATIONS],
         backgroundColor: "#f8f9fa",
-        textColor: "#000",
+        textColor: "#000000",
         createdAt: new Date("2025-01-06"),
     },
     {
@@ -58,7 +58,7 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.COMPLEX, EArtworkTags.THREE_D, EArtworkTags.NATURE, EArtworkTags.ANIMATIONS],
         backgroundColor: "#97bafd",
-        textColor: "#000",
+        textColor: "#000000",
         createdAt: new Date("2025-04-26"),
     },
     {
@@ -68,8 +68,19 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "3epge",
         tags: [EArtworkTags.ILLUSTRATIONS, EArtworkTags.ANIMATIONS, EArtworkTags.SIMPLE],
         backgroundColor: "#e4f0fc",
-        textColor: "#000",
+        textColor: "#000000",
         createdAt: new Date("2025-05-02"),
+    },
+    {
+        component: <CameraShutter />,
+        title: "Leaf Shutter",
+        description:
+            "A Leaf Shutter, from a Canon Lens, with Hue circle colors as the individual Leafs instead of black.",
+        gitHubName: "FabDonRixos",
+        tags: [EArtworkTags.COMPLEX, EArtworkTags.FILM_SERIES_VIDEOS, EArtworkTags.ANIMATIONS],
+        backgroundColor: "#87ceeb",
+        textColor: "#000000",
+        createdAt: new Date("2025-06-01"),
     },
 ];
 

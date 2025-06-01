@@ -1,0 +1,10 @@
+.cameraShutter {
+  width: 10rem;
+  height: 5rem;
+  background-color: red;
+  border-top-left-radius: 100%;
+  mask-image: radial-gradient(circle at 50% 310%, transparent 71.4%, black 71.4%);
+  transform-origin: 0 100%;
+  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid black;
+}
