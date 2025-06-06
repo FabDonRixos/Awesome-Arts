@@ -17,7 +17,7 @@ $size: 15rem;
     --shutter-opening: -75%;
   }
   80% {
-    --shutter-opening: 45%;
+    --shutter-opening: 39%;
   }
   100% {
     --shutter-opening: 0%;
@@ -28,11 +28,11 @@ $size: 15rem;
   0% {
     --shutter-opening: 0%;
   }
-  60% {
+  50% {
     --shutter-opening: -40%;
   }
-  95% {
-    --shutter-opening: 45%;
+  70% {
+    --shutter-opening: 39%;
   }
   100% {
     --shutter-opening: 0%;
@@ -47,11 +47,11 @@ $size: 15rem;
   overflow: hidden;
 
   & input[type="checkbox"]:not(:checked) ~ .cameraShutterWrapper .cameraShutter {
-    animation: take-photo-1 2s ease;
+    animation: take-photo-1 2.5s ease;
   }
 
   & input[type="checkbox"]:checked ~ .cameraShutterWrapper .cameraShutter {
-    animation: take-photo-2 3s ease;
+    animation: take-photo-2 2.5s ease;
   }
 }
 
@@ -98,7 +98,7 @@ $size: 15rem;
         z-index: 1;
       } @else {
         mask-image:
-          linear-gradient(to left, black 50%, transparent 50%),
+          linear-gradient(to left, transparent 40%, black 40%, black 100%, transparent 100%),
           radial-gradient(circle at 50% 280%, transparent 71.4%, black 71.4%);
         z-index: -1;
       }
