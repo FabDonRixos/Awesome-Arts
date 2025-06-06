@@ -28,8 +28,12 @@ select {
   &:is(:hover, :active, :focus) {
     outline: none;
     border-color: #121212;
-    box-shadow: 0 0 10px #03dc00;
+    box-shadow: 3px 3px 5px rgba(3, 220, 0, 0.5);
   }
+}
+
+label:has(.default-hidden-checkbox[type="checkbox"]) {
+  cursor: pointer;
 }
 
 .default-hidden-checkbox[type="checkbox"] {
