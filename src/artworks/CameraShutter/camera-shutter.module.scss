@@ -1,10 +1,107 @@
+@use "sass:math";
+@use "sass:list";
+
+$size: 15rem;
+
+@property --shutter-opening {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+@keyframes take-photo-1 {
+  0% {
+    --shutter-opening: 0%;
+  }
+  70% {
+    --shutter-opening: -75%;
+  }
+  80% {
+    --shutter-opening: 45%;
+  }
+  100% {
+    --shutter-opening: 0%;
+  }
+}
+
+@keyframes take-photo-2 {
+  0% {
+    --shutter-opening: 0%;
+  }
+  60% {
+    --shutter-opening: -40%;
+  }
+  95% {
+    --shutter-opening: 45%;
+  }
+  100% {
+    --shutter-opening: 0%;
+  }
+}
+
+.lensWrapper {
+  position: relative;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+
+  & input[type="checkbox"]:not(:checked) ~ .cameraShutterWrapper .cameraShutter {
+    animation: take-photo-1 2s ease;
+  }
+
+  & input[type="checkbox"]:checked ~ .cameraShutterWrapper .cameraShutter {
+    animation: take-photo-2 3s ease;
+  }
+}
+
+.lens {
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 10px solid black;
+  z-index: 100;
+}
+
+.cameraShutterWrapper {
+  z-index: 1;
+  position: absolute;
+  top: 10%;
+}
+
 .cameraShutter {
-  width: 10rem;
-  height: 5rem;
-  background-color: red;
-  border-top-left-radius: 100%;
-  mask-image: radial-gradient(circle at 50% 310%, transparent 71.4%, black 71.4%);
-  transform-origin: 0 100%;
-  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid black;
+  position: absolute;
+  width: $size;
+  height: math.div($size, 5) * 2;
+  transform-origin: bottom;
+  box-shadow: inset 10px 40px 15px rgba(0, 0, 0, 0.5);
+  mask-composite: intersect;
+  top: 10%;
+
+  $leaf-count: 20;
+
+  @for $i from 1 through $leaf-count {
+    $step: math.ceil(math.div($i, 2));
+    $hue: ($step - 1) * math.div(360, $leaf-count) * 2;
+
+    &:nth-child(#{$i}) {
+      transition: transform 1s ease;
+      transform: rotate(2deg * math.div(360, $leaf-count) * ($step - 1)) translateY(var(--shutter-opening));
+      background-color: hsl($hue, 100%, 50%);
+
+      @if ($i % 2 == 1) {
+        mask-image:
+          linear-gradient(to left, transparent 50%, black 50%),
+          radial-gradient(circle at 50% 280%, transparent 71.4%, black 71.4%),
+          radial-gradient(circle at -10% 307%, black 71.4%, transparent 71.4%);
+        z-index: 1;
+      } @else {
+        mask-image:
+          linear-gradient(to left, black 50%, transparent 50%),
+          radial-gradient(circle at 50% 280%, transparent 71.4%, black 71.4%);
+        z-index: -1;
+      }
+    }
+  }
 }

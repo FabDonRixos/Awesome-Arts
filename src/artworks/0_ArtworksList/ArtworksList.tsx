@@ -48,7 +48,7 @@ const artworksList: IArtworkItem[] = [
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.THREE_D, EArtworkTags.SHAPES, EArtworkTags.ANIMATIONS],
         backgroundColor: "#597585",
-        textColor: "#fff",
+        textColor: "#ffffff",
         createdAt: new Date("2025-01-24"),
     },
     {
@@ -80,7 +80,7 @@ const artworksList: IArtworkItem[] = [
         tags: [EArtworkTags.COMPLEX, EArtworkTags.FILM_SERIES_VIDEOS, EArtworkTags.ANIMATIONS],
         backgroundColor: "#87ceeb",
         textColor: "#000000",
-        createdAt: new Date("2025-06-01"),
+        createdAt: new Date("2025-06-06"),
     },
 ];
 
