@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { EArtworkTags } from "./artworkTags.ts";
-import { ColorModel, Cube, YinYang, AtomModel, EvilEye, CameraShutter } from "./lazyLoad.ts";
+import { ColorModel, Cube, YinYang, AtomModel, EvilEye, CameraShutter, Pokeball } from "./lazyLoad.ts";
 
 interface ILink {
     name: string;
@@ -81,6 +81,16 @@ const artworksList: IArtworkItem[] = [
         backgroundColor: "#87ceeb",
         textColor: "#000000",
         createdAt: new Date("2025-06-06"),
+    },
+    {
+        component: <Pokeball />,
+        title: "Pokeball",
+        description: "Ball to catch the famous Pokémon from the Classic Games.",
+        gitHubName: "FabDonRixos",
+        tags: [EArtworkTags.ILLUSTRATIONS, EArtworkTags.GAMES, EArtworkTags.FILM_SERIES_VIDEOS],
+        backgroundColor: "#c2eac5",
+        textColor: "#000000",
+        createdAt: new Date("2025-06-08"),
     },
 ];
 

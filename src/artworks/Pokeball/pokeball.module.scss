@@ -1,0 +1,72 @@
+$size: 15rem;
+
+.pokeball,
+.pokeball:after {
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+}
+
+.pokeball {
+  position: relative;
+  --pokeBall-color: red;
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 46%,
+    black 46%,
+    black 54%,
+    var(--pokeBall-color) 54%,
+    var(--pokeBall-color) 100%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    background: rgba(255, 255, 255, 0.75);
+    width: 3.5rem;
+    height: 2rem;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: radial-gradient(
+      circle at center,
+      white 0%,
+      white 8%,
+      black 10%,
+      black 11%,
+      white 11%,
+      white 16%,
+      black 16%,
+      black 24%,
+      transparent 24%,
+      transparent 67.5%,
+      black 67.5%,
+      black 100%
+    );
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    --pokeBall-color: rgb(254, 171, 13);
+
+    & .gs {
+      display: block;
+    }
+  }
+}
+
+.gs {
+  display: none;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Audiowide", cursive;
+  -webkit-text-stroke: 1px black;
+}
