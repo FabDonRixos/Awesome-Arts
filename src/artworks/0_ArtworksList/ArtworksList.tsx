@@ -84,11 +84,11 @@ const artworksList: IArtworkItem[] = [
     },
     {
         component: <Pokeball />,
-        title: "Pokéball",
+        title: "Pokeball",
         description: "Ball to catch the famous Pokémon from the Classic Games.",
         gitHubName: "FabDonRixos",
         tags: [EArtworkTags.ILLUSTRATIONS, EArtworkTags.GAMES, EArtworkTags.FILM_SERIES_VIDEOS],
-        backgroundColor: "#a7ecab",
+        backgroundColor: "#c2eac5",
         textColor: "#000000",
         createdAt: new Date("2025-06-08"),
     },
