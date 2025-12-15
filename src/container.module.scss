@@ -20,14 +20,20 @@
         grid-template-columns: 1fr;
       }
     }
+  }
 
-    & .noComponentsFound {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  & .noComponentsFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & span {
       text-align: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+    }
+
+    & button {
+      padding: 0.5rem 1rem;
     }
   }
 

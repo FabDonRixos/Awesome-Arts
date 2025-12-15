@@ -53,25 +53,25 @@ function App(): ReactElement {
         <>
             <Header setCurrentTag={setCurrentTag} setSearch={setSearch} currentTag={currentTag} search={search} />
             <div className={style.container}>
-                <div className={style.componentList}>
-                    {filteredArtworks.length > 0 ? (
-                        filteredArtworks
-                            .slice(0, currentlyLoadedArtworks)
-                            .map((artwork) => <Artwork key={shuffledArtworks.indexOf(artwork)} artwork={artwork} />)
-                    ) : (
-                        <div className={style.noComponentsFound}>
-                            <span>No Components where found corresponding to the current filter settings.</span>
-                            <button
-                                onClick={() => {
-                                    setCurrentTag(undefined);
-                                    setSearch("");
-                                }}
-                            >
-                                Reset Filters
-                            </button>
-                        </div>
-                    )}
-                </div>
+                {filteredArtworks.length > 0 ? (
+                    <div className={style.componentList}>
+                        {filteredArtworks.slice(0, currentlyLoadedArtworks).map((artwork) => (
+                            <Artwork key={shuffledArtworks.indexOf(artwork)} artwork={artwork} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className={style.noComponentsFound}>
+                        <span>No Components where found corresponding to the current filter settings.</span>
+                        <button
+                            onClick={() => {
+                                setCurrentTag(undefined);
+                                setSearch("");
+                            }}
+                        >
+                            Reset Filters
+                        </button>
+                    </div>
+                )}
                 {filteredArtworks.length > 0 && filteredArtworks.length > currentlyLoadedArtworks && (
                     <div className={style.loadMore}>
                         <button onClick={loadMoreArtworks}>Load More</button>
