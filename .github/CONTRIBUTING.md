@@ -12,6 +12,7 @@ If you are willing to contribute to this project here is a step by step introduc
 Component.
 
 - Add your component (0 is just to make 0_artworks-list and 0_template stay at the top)
+
   ```
   src
   ├── artworks
@@ -30,7 +31,9 @@ Component.
   │
   └── App.tsx
   ```
+
   - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
+
 - Use the template
 - Go to LazyLoad and import your Component bases on the already existing Components.
 - Then go to the artworksList and create a new entry look at the IArtworkItem to know what props there are.
