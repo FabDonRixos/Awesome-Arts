@@ -30,6 +30,7 @@ Component.
   │
   └── App.tsx
   ```
+
   - [Camelcase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case)
 - Use the template
 - Go to LazyLoad and import your Component bases on the already existing Components.
