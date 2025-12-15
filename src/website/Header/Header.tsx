@@ -10,7 +10,7 @@ interface InputsProps {
     search: string;
 }
 
-export default function Header(props: InputsProps): ReactElement {
+export default function Header(props: Readonly<InputsProps>): ReactElement {
     return (
         <header className={style.header}>
             <div className={style.top}>
@@ -40,7 +40,7 @@ export default function Header(props: InputsProps): ReactElement {
     );
 }
 
-function Inputs({ setCurrentTag, setSearch, currentTag, search }: InputsProps): ReactElement {
+function Inputs({ setCurrentTag, setSearch, currentTag, search }: Readonly<InputsProps>): ReactElement {
     return (
         <>
             <input

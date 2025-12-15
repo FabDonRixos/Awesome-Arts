@@ -3,7 +3,7 @@ import classNames from "classnames";
 import style from "./artwork.module.scss";
 import { IArtworkItem } from "../../artworks/0_ArtworksList/ArtworksList.tsx";
 
-export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactElement {
+export default function Artwork({ artwork }: Readonly<{ artwork: IArtworkItem }>): ReactElement {
     const [open, setOpen] = useState(true);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function Artwork({ artwork }: { artwork: IArtworkItem }): ReactEl
     return (
         <Suspense fallback={<div className={style.component}>Loading...</div>}>
             <div
-                className={`${style.component} ${artwork.full ? `${style.full}` : undefined}`}
+                className={classNames(style.component, artwork.full && style.full)}
                 style={
                     {
                         "--background-color":
